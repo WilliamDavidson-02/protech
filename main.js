@@ -21,7 +21,7 @@ const toggleMenuBar = () => {
   secondLine.classList.toggle("opacity-0");
 
   if (secondLine.classList.contains("w-0")) {
-    secondLine.classList.add("w-0", "w-8");
+    secondLine.classList.replace("w-0", "w-8");
     firstLine.classList.remove(
       "-rotate-45",
       "w-[calc-(19*1.41421356237)px]",
