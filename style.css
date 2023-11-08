@@ -10,3 +10,7 @@
 .zen-dots {
   font-family: "Zen Dots", sans-serif;
 }
+
+.transform-right-center {
+  transform-origin: right center;
+}
