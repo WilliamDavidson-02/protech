@@ -7,19 +7,21 @@ const aSideInner = document.querySelector("#aside-inner");
 const toggleMenuBar = () => {
   const [firstLine, secondLine, thirdLine] = menuLines;
   if (!aSideContainer.classList.contains("hidden")) {
+    aSideInner.classList.replace("translate-x-0", "translate-x-full");
     setTimeout(() => {
       aSideContainer.classList.toggle("hidden");
     }, 300);
   } else {
     aSideContainer.classList.toggle("hidden");
+    setTimeout(() => {
+      aSideInner.classList.replace("translate-x-full", "translate-x-0");
+    }, 10);
   }
-  setTimeout(() => {
-    aSideInner.classList.toggle("translate-x-0");
-  }, 10);
+
+  secondLine.classList.toggle("opacity-0");
 
   if (secondLine.classList.contains("w-0")) {
-    secondLine.classList.remove("w-0", "opacity-0");
-    secondLine.classList.add("w-8");
+    secondLine.classList.add("w-0", "w-8");
     firstLine.classList.remove(
       "-rotate-45",
       "w-[calc-(19*1.41421356237)px]",
@@ -31,8 +33,7 @@ const toggleMenuBar = () => {
       "translate-y-[3px]"
     );
   } else {
-    secondLine.classList.add("w-0", "opacity-0");
-    secondLine.classList.remove("w-8");
+    secondLine.classList.replace("w-8", "w-0");
     firstLine.classList.add(
       "-rotate-45",
       "w-[calc-(19*1.41421356237)px]",
