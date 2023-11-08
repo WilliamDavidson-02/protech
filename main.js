@@ -7,25 +7,25 @@ menuBtn.addEventListener("click", () => {
     secondLine.classList.remove("w-0", "opacity-0");
     firstLine.classList.remove(
       "-rotate-45",
-      "w-[calc-(108*1.41421356237)px]",
-      "-translate-y-[1px]"
+      "w-[calc-(19*1.41421356237)px]",
+      "-translate-y-[3px]"
     );
     thirdLine.classList.remove(
       "rotate-45",
-      "w-[calc-(108*1.41421356237)px]",
-      "translate-y-[1px]"
+      "w-[calc-(19*1.41421356237)px]",
+      "translate-y-[3px]"
     );
   } else {
     secondLine.classList.add("w-0", "opacity-0");
     firstLine.classList.add(
       "-rotate-45",
-      "w-[calc-(108*1.41421356237)px]",
-      "-translate-y-[1px]"
+      "w-[calc-(19*1.41421356237)px]",
+      "-translate-y-[3px]"
     );
     thirdLine.classList.add(
       "rotate-45",
-      "w-[calc-(108*1.41421356237)px]",
-      "translate-y-[1px]"
+      "w-[calc-(19*1.41421356237)px]",
+      "translate-y-[3px]"
     );
   }
 });

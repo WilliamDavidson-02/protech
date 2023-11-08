@@ -7,6 +7,11 @@
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+button,
+input {
+  outline: none;
+}
+
 .zen-dots {
   font-family: "Zen Dots", sans-serif;
 }
