@@ -4,8 +4,8 @@ const menuLines = document.querySelectorAll("#menu-btn #menu-line");
 const aSideContainer = document.querySelector("#aside-container");
 const aSideInner = document.querySelector("#aside-inner");
 
-const expandNavLink = document.querySelectorAll("#expand-nav-link");
-const expandIcon = document.querySelectorAll("#expand-nav-link #expand-icon");
+const dropdownBtns = document.querySelectorAll("#dropdown-btn");
+const expandIcons = document.querySelectorAll("#expand-icon");
 
 const toggleMenuBar = () => {
   const [firstLine, secondLine, thirdLine] = menuLines;
@@ -55,4 +55,19 @@ window.addEventListener("resize", () => {
   if ((window.innerWidth > 768) & menuLines[1].classList.contains("w-0")) {
     toggleMenuBar();
   }
+});
+
+dropdownBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    expandIcons[index].textContent =
+      expandIcons[index].textContent.trim() === "expand_more"
+        ? "expand_less"
+        : "expand_more";
+    const childToExpand = btn.children[btn.children.length - 1];
+    childToExpand.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+    });
+    childToExpand.style.height =
+      childToExpand.clientHeight === 0 ? `${childToExpand.scrollHeight}px` : 0;
+  });
 });
