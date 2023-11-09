@@ -4,6 +4,9 @@ const menuLines = document.querySelectorAll("#menu-btn #menu-line");
 const aSideContainer = document.querySelector("#aside-container");
 const aSideInner = document.querySelector("#aside-inner");
 
+const expandNavLink = document.querySelectorAll("#expand-nav-link");
+const expandIcon = document.querySelectorAll("#expand-nav-link #expand-icon");
+
 const toggleMenuBar = () => {
   const [firstLine, secondLine, thirdLine] = menuLines;
   if (!aSideContainer.classList.contains("hidden")) {
@@ -48,3 +51,8 @@ const toggleMenuBar = () => {
 };
 
 menuBtn.addEventListener("click", toggleMenuBar);
+window.addEventListener("resize", () => {
+  if ((window.innerWidth > 768) & menuLines[1].classList.contains("w-0")) {
+    toggleMenuBar();
+  }
+});
