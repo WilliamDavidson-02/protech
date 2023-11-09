@@ -10,6 +10,8 @@ let prevDropdownIndex = null;
 
 const forms = document.querySelectorAll("#form");
 
+const searchForms = document.querySelectorAll("#search");
+
 const toggleDropdown = (index) => {
   expandIcons[index].textContent =
     expandIcons[index].textContent.trim() === "expand_more"
@@ -115,5 +117,12 @@ forms.forEach((form) => {
         emailIcon.classList.remove("text-red-500", "animate-shake");
       }, 500);
     }
+  });
+});
+
+searchForms.forEach((searchForm) => {
+  searchForm.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    searchForm.querySelector("#search-input").value = "";
   });
 });
