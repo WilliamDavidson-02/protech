@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="style.css" />
     <title>Protech</title>
   </head>
-  <body class="bg-pro-white w-screen min-h-screen">
-    <header class="relative w-full py-4 md:py-8 bg-pro-white">
+  <body class="bg-pro-white">
+    <header class="relative w-full bg-pro-white z-50">
       <aside
         id="aside-container"
-        class="hidden w-screen h-[calc(100vh-57px)] absolute lef-0 top-full overflow-hidden"
+        class="hidden w-screen h-[calc(100vh-57px)] absolute left-0 top-full overflow-hidden"
       >
         <div
           id="aside-inner"
@@ -163,7 +163,7 @@
         </div>
       </aside>
       <nav
-        class="flex justify-between items-center max-w-[1152px] mx-auto px-6"
+        class="flex justify-between items-center max-w-[1440px] mx-auto px-6 py-4 md:py-8 bg-pro-white"
       >
         <img class="max-w-[230px]" src="./assets/logga-lggande-2.svg" alt="" />
         <!-- Mobile -->
@@ -186,10 +186,129 @@
         </div>
         <!-- Desktop -->
         <div class="hidden md:flex gap-6 text-xl text-pro-black select-none">
-          <a href="#">Våra smycken</a>
-          <a href="#">Appen</a>
-          <a href="#">Om oss</a>
-          <a href="#">Nyhetsbrev</a>
+          <div id="nav-lg-link" class="group">
+            <a href="#">Våra smycken</a>
+            <div
+              id="underline"
+              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+            ></div>
+            <div
+              id="nav-lg-dropdown"
+              class="hidden h-screen left-0 top-[92px] w-full -z-20"
+            >
+              <div
+                class="py-16 px-6 -translate-y-full transition-all duration-300 bg-pro-white w-full"
+              >
+                <div class="max-w-[1440px] w-full mx-auto flex gap-[21px]">
+                  <div
+                    class="flex flex-col gap-[40px] border border-transparent border-r-pro-black pr-8 w-1/4 min-w-[300px]"
+                  >
+                    <h1 class="text-2xl zen-dots">Kollektioner</h1>
+                    <div class="cursor-pointer">
+                      <h2 class="text-[28px] leading-[34px]">Klassiska</h2>
+                      <p class="text-pro-gray leading-[22px]">
+                        Våra klassiska snitt
+                      </p>
+                    </div>
+                    <div class="cursor-pointer">
+                      <h2 class="text-[28px] leading-[34px]">Tech</h2>
+                      <p class="text-pro-gray leading-[22px]">
+                        Våra moderna snitt
+                      </p>
+                    </div>
+                    <div
+                      class="flex justify-between items-center cursor-pointer"
+                    >
+                      <div>
+                        <h2 class="text-[28px] leading-[34px]">Visa alla</h2>
+                        <p class="text-pro-gray leading-[22px]">
+                          Se alla produkter
+                        </p>
+                      </div>
+                      <span
+                        class="material-symbols-outlined text-pro-gold text-3xl"
+                      >
+                        chevron_right
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    class="flex gap-[21px] w-3/4 overflow-x-auto snap-x snap-mandatory"
+                  >
+                    <div
+                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[300px] cursor-pointer snap-always snap-start"
+                    >
+                      <img
+                        class="max-h-[150px] object-contain"
+                        src="assets/Ring Tech.png"
+                        alt=""
+                      />
+                      <div class="text-center">
+                        <h2 class="text-[28px] font-semibold leading-[34px]">
+                          Tech Ring
+                        </h2>
+                        <p class="text-pro-gray">
+                          Senaste ringen med de senaste funktionerna.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[300px] cursor-pointer snap-always snap-start"
+                    >
+                      <img
+                        class="max-h-[150px] object-contain"
+                        src="assets/Ring Tech 2.png"
+                        alt=""
+                      />
+                      <div class="text-center">
+                        <h2 class="text-[28px] font-semibold leading-[34px]">
+                          Tech Armband
+                        </h2>
+                        <p class="text-pro-gray">
+                          Senaste ringen med de senaste funktionerna.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[300px] cursor-pointer snap-always snap-start"
+                    >
+                      <img
+                        class="max-h-[150px] object-contain"
+                        src="assets/Ring Tech 3.png"
+                        alt=""
+                      />
+                      <div class="text-center">
+                        <h2 class="text-[28px] font-semibold leading-[34px]">
+                          Se alla
+                        </h2>
+                        <p class="text-pro-gray">
+                          Senaste ringen med de senaste funktionerna.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <a href="#">Appen</a>
+            <div
+              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+            ></div>
+          </div>
+          <div class="group">
+            <a href="#">Om oss</a>
+            <div
+              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+            ></div>
+          </div>
+          <div class="group">
+            <a href="#">Nyhetsbrev</a>
+            <div
+              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+            ></div>
+          </div>
         </div>
         <div
           class="hidden md:flex gap-2 items-center text-xl text-pro-black cursor-pointer"
@@ -199,7 +318,7 @@
         </div>
       </nav>
     </header>
-    <main class="max-w-[1152px] w-full mx-auto">
+    <main class="max-w-[1440px] w-full mx-auto">
       <!-- Hero Section -->
       <section
         class="h-[calc(100vh-60px)] md:h-[calc(100vh-92px)] flex md:justify-end justify-center md:items-center items-end px-6"
@@ -316,7 +435,7 @@
             </div>
             <div class="relative w-1/3 shrink-0">
               <img
-                class="absolute -top-[60%] -rotate-12"
+                class="absolute -top-[80px] -rotate-12"
                 src="assets/Test_nyckelring.png"
                 alt=""
               />
@@ -329,7 +448,7 @@
           </div>
         </div>
       </section>
-      <!-- Product section -->
+      <!-- Products section -->
       <section class="my-16 px-6">
         <h1 class="zen-dots text-xl mb-2">Produkter</h1>
         <div
@@ -420,7 +539,7 @@
             </div>
             <p class="text-pro-gray text-center">
               “Älskade detta känner mig så trygg nu när jag ska åka taxi själv
-              hem från kogen”
+              hem från krogen
             </p>
           </div>
         </div>

@@ -6,6 +6,8 @@ const aSideInner = document.querySelector("#aside-inner");
 
 const dropdownBtns = document.querySelectorAll("#dropdown-btn");
 const expandIcons = document.querySelectorAll("#expand-icon");
+const navLgLinks = document.querySelectorAll("#nav-lg-link");
+const navLgDropdown = document.querySelectorAll("#nav-lg-dropdown");
 let prevDropdownIndex = null;
 
 const forms = document.querySelectorAll("#form");
@@ -13,6 +15,8 @@ const forms = document.querySelectorAll("#form");
 const searchForms = document.querySelectorAll("#search");
 
 const scrollToTop = document.querySelector("#scrollToTop");
+
+const navLinks = document.querySelectorAll("#nav-link");
 
 const toggleDropdown = (index) => {
   expandIcons[index].textContent =
@@ -131,4 +135,30 @@ searchForms.forEach((searchForm) => {
 
 scrollToTop.addEventListener("click", (ev) => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+navLgLinks.forEach((link, index) => {
+  link.addEventListener("click", () => {
+    const underline = link.querySelector("#underline");
+    const dropdown = navLgDropdown[index];
+    const dropdownInner = dropdown.children[0];
+
+    dropdownInner.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+    });
+
+    if (underline.classList.contains("w-0")) {
+      underline.classList.replace("w-0", "w-full");
+      dropdown.classList.replace("hidden", "absolute");
+      setTimeout(() => {
+        dropdownInner.classList.replace("-translate-y-full", "translate-y-0");
+      }, 10);
+    } else {
+      underline.classList.replace("w-full", "w-0");
+      dropdownInner.classList.replace("translate-y-0", "-translate-y-full");
+      setTimeout(() => {
+        dropdown.classList.replace("absolute", "hidden");
+      }, 300);
+    }
+  });
 });
