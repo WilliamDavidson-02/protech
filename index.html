@@ -426,6 +426,81 @@
         </div>
       </section>
     </main>
+    <footer
+      class="mt-16 px-6 pt-16 pb-8 bg-pro-white-purple flex flex-col items-center"
+    >
+      <button
+        id="scrollToTop"
+        class="cursor-pointer py-2 px-16 bg-gradient-to-r from-pro-dark-purple to-pro-light-purple rounded-full text-pro-white flex items-center text-sm mb-12"
+      >
+        <span>Till toppen</span>
+        <span class="material-symbols-outlined"> expand_less </span>
+      </button>
+      <div
+        id="dropdown-btn"
+        class="border border-x-transparent border-y-pro-black py-2 select-none w-full"
+      >
+        <div class="flex justify-between items-center cursor-pointer">
+          <div>
+            <h1 class="m-0 text-xl zen-dots">Kontakta oss</h1>
+            <p class="m-0 text-pro-dark-purple">Kontaktuppgifter</p>
+          </div>
+          <span
+            id="expand-icon"
+            class="material-symbols-outlined text-5xl cursor-pointer text-pro-dark-purple"
+          >
+            expand_more
+          </span>
+        </div>
+        <div
+          class="flex flex-col gap-4 h-0 overflow-hidden transition-all ease-out duration-300"
+        >
+          <div class="flex gap-2">
+            <span class="material-symbols-outlined"> call </span>
+            <span>031-111 22 33</span>
+          </div>
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined"> mail </span>
+            <span>support@protech.se</span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="dropdown-btn"
+        class="border border-x-transparent border-b-pro-black py-2 select-none w-full"
+      >
+        <div class="flex justify-between items-center cursor-pointer">
+          <div>
+            <h1 class="m-0 text-xl zen-dots">Hjälp och support</h1>
+            <p class="m-0 text-pro-dark-purple">Hjälp och support</p>
+          </div>
+          <span
+            id="expand-icon"
+            class="material-symbols-outlined text-5xl cursor-pointer text-pro-dark-purple"
+          >
+            expand_more
+          </span>
+        </div>
+        <div
+          class="flex flex-col gap-2 h-0 overflow-hidden transition-all ease-out duration-300"
+        >
+          <a href="#" class="text-pro-gray text-sm underline">FAQ</a>
+        </div>
+      </div>
+      <div class="mt-[88px] w-full flex gap-[54px] justify-center">
+        <img
+          class="cursor-pointer w-9 h-w-9"
+          src="assets/instagram.svg"
+          alt=""
+        />
+        <img
+          class="cursor-pointer w-9 h-w-9"
+          src="assets/facebook.svg"
+          alt=""
+        />
+        <img class="cursor-pointer w-9 h-w-9" src="assets/x.svg" alt="" />
+      </div>
+    </footer>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

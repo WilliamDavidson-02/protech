@@ -19,6 +19,7 @@ export default {
         "pro-white": "#F5F5F7",
         "pro-gold": "#D9B573",
         "pro-light-gold": "#F4EAD7",
+        "pro-white-purple": "#F4EAFA",
         "pro-light-purple": "#A352D9",
         "pro-dark-purple": "#7937A6",
       },

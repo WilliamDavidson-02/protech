@@ -12,6 +12,8 @@ const forms = document.querySelectorAll("#form");
 
 const searchForms = document.querySelectorAll("#search");
 
+const scrollToTop = document.querySelector("#scrollToTop");
+
 const toggleDropdown = (index) => {
   expandIcons[index].textContent =
     expandIcons[index].textContent.trim() === "expand_more"
@@ -125,4 +127,8 @@ searchForms.forEach((searchForm) => {
     ev.preventDefault();
     searchForm.querySelector("#search-input").value = "";
   });
+});
+
+scrollToTop.addEventListener("click", (ev) => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
