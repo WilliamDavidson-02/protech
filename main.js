@@ -18,6 +18,7 @@ const scrollToTop = document.querySelector("#scrollToTop");
 
 const navLinks = document.querySelectorAll("#nav-link");
 
+// Smaller drop downs in nav mobile and footer.
 const toggleDropdown = (index) => {
   expandIcons[index].textContent =
     expandIcons[index].textContent.trim() === "expand_more"
@@ -35,6 +36,30 @@ const toggleDropdown = (index) => {
     childToExpand.clientHeight === 0 ? `${childToExpand.scrollHeight}px` : 0;
 
   childToExpand.classList.toggle("my-4");
+};
+
+const toggleDesktopDropdown = (index) => {
+  const underline = document.querySelectorAll("#underline")[index];
+  const dropdown = navLgDropdown[index];
+  const dropdownInner = dropdown.children[0];
+
+  dropdownInner.addEventListener("click", (ev) => {
+    ev.stopPropagation();
+  });
+
+  if (underline.classList.contains("w-0")) {
+    underline.classList.replace("w-0", "w-full");
+    dropdown.classList.replace("hidden", "absolute");
+    setTimeout(() => {
+      dropdownInner.classList.replace("-translate-y-full", "translate-y-0");
+    }, 10);
+  } else {
+    underline.classList.replace("w-full", "w-0");
+    dropdownInner.classList.replace("translate-y-0", "-translate-y-full");
+    setTimeout(() => {
+      dropdown.classList.replace("absolute", "hidden");
+    }, 300);
+  }
 };
 
 const toggleMenuBar = () => {
@@ -139,26 +164,18 @@ scrollToTop.addEventListener("click", (ev) => {
 
 navLgLinks.forEach((link, index) => {
   link.addEventListener("click", () => {
-    const underline = link.querySelector("#underline");
-    const dropdown = navLgDropdown[index];
-    const dropdownInner = dropdown.children[0];
-
-    dropdownInner.addEventListener("click", (ev) => {
-      ev.stopPropagation();
-    });
-
-    if (underline.classList.contains("w-0")) {
-      underline.classList.replace("w-0", "w-full");
-      dropdown.classList.replace("hidden", "absolute");
-      setTimeout(() => {
-        dropdownInner.classList.replace("-translate-y-full", "translate-y-0");
-      }, 10);
-    } else {
-      underline.classList.replace("w-full", "w-0");
-      dropdownInner.classList.replace("translate-y-0", "-translate-y-full");
-      setTimeout(() => {
-        dropdown.classList.replace("absolute", "hidden");
-      }, 300);
+    if (prevDropdownIndex !== index && prevDropdownIndex !== null) {
+      toggleDesktopDropdown(prevDropdownIndex);
     }
+    toggleDesktopDropdown(index);
+    prevDropdownIndex = prevDropdownIndex !== index ? index : null;
   });
+});
+
+window.addEventListener("keydown", (ev) => {
+  // Esc key to close desktop dropdown.
+  if (ev.key === "Escape") {
+    toggleDesktopDropdown(prevDropdownIndex);
+    prevDropdownIndex = null;
+  }
 });
