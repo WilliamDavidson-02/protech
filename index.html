@@ -204,23 +204,35 @@
                     class="flex flex-col gap-[40px] border border-transparent border-r-pro-black pr-8 w-1/4 min-w-[300px]"
                   >
                     <h1 class="text-2xl zen-dots">Kollektioner</h1>
-                    <div class="cursor-pointer">
-                      <h2 class="text-[28px] leading-[34px]">Klassiska</h2>
+                    <div class="cursor-pointer group/collection-link">
+                      <h2
+                        class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300"
+                      >
+                        Klassiska
+                      </h2>
                       <p class="text-pro-gray leading-[22px]">
                         Våra klassiska snitt
                       </p>
                     </div>
-                    <div class="cursor-pointer">
-                      <h2 class="text-[28px] leading-[34px]">Tech</h2>
+                    <div class="cursor-pointer group/collection-link">
+                      <h2
+                        class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300"
+                      >
+                        Tech
+                      </h2>
                       <p class="text-pro-gray leading-[22px]">
                         Våra moderna snitt
                       </p>
                     </div>
                     <div
-                      class="flex justify-between items-center cursor-pointer"
+                      class="flex justify-between items-center cursor-pointer group/collection-link"
                     >
                       <div>
-                        <h2 class="text-[28px] leading-[34px]">Visa alla</h2>
+                        <h2
+                          class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300"
+                        >
+                          Visa alla
+                        </h2>
                         <p class="text-pro-gray leading-[22px]">
                           Se alla produkter
                         </p>
@@ -349,11 +361,13 @@
                         type="text"
                         placeholder="name@mail.com"
                       />
-                      <span
-                        class="material-symbols-outlined flex items-center cursor-pointer"
-                      >
-                        arrow_forward
-                      </span>
+                      <button type="submit">
+                        <span
+                          class="material-symbols-outlined flex items-center cursor-pointer"
+                        >
+                          arrow_forward
+                        </span>
+                      </button>
                     </form>
                     <p class="px-8 text-[23px] leading-[27px]">
                       Skriv in mailadress för att gå med i nyhetsbrevet
@@ -481,7 +495,7 @@
         <div class="py-8 px-6 bg-pro-light-gold w-full flex flex-col gap-6">
           <div class="flex">
             <div>
-              <h2 class="text-lg font-semibold">Kommer snart</h2>
+              <h2 class="text-lg font-semibold zen-dots">Kommer snart</h2>
               <p class="">
                 Nyckelring för barn med gps tracking. Signa upp för nyhetsbrevet
                 för att få info när produkten finns tillgänglig.
@@ -576,7 +590,9 @@
       </section>
       <!-- Testament card -->
       <section>
-        <div class="py-8 px-6 bg-pro-light-gold w-full flex justify-between">
+        <div
+          class="py-8 px-6 bg-pro-light-gold w-full max-w-[882px] mx-auto flex justify-between"
+        >
           <div class="w-36 h-36 mr-10 shrink-0 rounded-full overflow-hidden">
             <img
               class="h-full w-full object-cover"

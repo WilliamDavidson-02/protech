@@ -8,6 +8,7 @@ const dropdownBtns = document.querySelectorAll("#dropdown-btn");
 const expandIcons = document.querySelectorAll("#expand-icon");
 const navLgLinks = document.querySelectorAll("#nav-lg-link");
 const navLgDropdown = document.querySelectorAll("#nav-lg-dropdown");
+const underlines = document.querySelectorAll("#underline");
 let prevDropdownIndex = null;
 
 const forms = document.querySelectorAll("#form");
@@ -39,7 +40,7 @@ const toggleDropdown = (index) => {
 };
 
 const toggleDesktopDropdown = (index) => {
-  const underline = document.querySelectorAll("#underline")[index];
+  const underline = underlines[index];
   const dropdown = navLgDropdown[index];
   const dropdownInner = dropdown.children[0];
 
@@ -116,6 +117,13 @@ window.addEventListener("resize", () => {
   if ((window.innerWidth > 768) & menuLines[1].classList.contains("w-0")) {
     toggleMenuBar();
   }
+  if (
+    (window.innerWidth <= 768) &
+    underlines[prevDropdownIndex]?.classList.contains("w-full")
+  ) {
+    toggleDesktopDropdown(prevDropdownIndex);
+    prevDropdownIndex = null;
+  }
 });
 
 dropdownBtns.forEach((btn, index) => {
@@ -174,6 +182,7 @@ navLgLinks.forEach((link, index) => {
 
 window.addEventListener("keydown", (ev) => {
   // Esc key to close desktop dropdown.
+  ev.preventDefault();
   if (ev.key === "Escape") {
     toggleDesktopDropdown(prevDropdownIndex);
     prevDropdownIndex = null;
