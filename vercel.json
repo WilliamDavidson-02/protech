@@ -1,5 +1,5 @@
 {
-  "reqrites": [
+  "rewrites": [
     {
       "src": "/public/:path*",
       "destination": "/public/:path*"
