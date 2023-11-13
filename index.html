@@ -200,28 +200,35 @@
                 class="py-16 px-6 -translate-y-full transition-all duration-300 bg-pro-white w-full"
               >
                 <div class="max-w-[1440px] w-full mx-auto flex gap-[21px]">
+                  <!-- Menu list -->
                   <div
                     class="flex flex-col gap-[40px] border border-transparent border-r-pro-black pr-8 w-1/4 min-w-[300px]"
                   >
                     <h1 class="text-2xl zen-dots">Kollektioner</h1>
-                    <div class="cursor-pointer group/collection-link">
+                    <div
+                      id="collection-nav-btn"
+                      class="cursor-pointer group/collection-link"
+                    >
                       <h2
-                        class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300"
+                        class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300 font-semibold text-pro-dark-purple"
                       >
                         Klassiska
                       </h2>
                       <p class="text-pro-gray leading-[22px]">
-                        Våra klassiska snitt
+                        Vår klassiska kollektion
                       </p>
                     </div>
-                    <div class="cursor-pointer group/collection-link">
+                    <div
+                      id="collection-nav-btn"
+                      class="cursor-pointer group/collection-link"
+                    >
                       <h2
                         class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300"
                       >
                         Tech
                       </h2>
                       <p class="text-pro-gray leading-[22px]">
-                        Våra moderna snitt
+                        High-tech kollektionen
                       </p>
                     </div>
                     <div
@@ -244,45 +251,44 @@
                       </span>
                     </div>
                   </div>
+                  <!-- Collection cards -->
                   <div
                     class="flex gap-[21px] w-3/4 overflow-x-auto snap-x snap-mandatory"
                   >
                     <div
+                      id="collection-card"
                       class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[300px] cursor-pointer snap-always snap-start"
                     >
                       <img
                         class="max-h-[150px] object-contain"
-                        src="assets/Ring Tech.png"
+                        src="assets/classic_ring.png"
                         alt=""
                       />
                       <div class="text-center">
                         <h2 class="text-[28px] font-semibold leading-[34px]">
-                          Tech Ring
+                          Klassisk Ring
                         </h2>
-                        <p class="text-pro-gray">
-                          Senaste ringen med de senaste funktionerna.
-                        </p>
+                        <p class="text-pro-gray">Klassisk ring</p>
                       </div>
                     </div>
                     <div
+                      id="collection-card"
                       class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[300px] cursor-pointer snap-always snap-start"
                     >
                       <img
                         class="max-h-[150px] object-contain"
-                        src="assets/Ring Tech 2.png"
+                        src="assets/Custom Classic Gold.png"
                         alt=""
                       />
                       <div class="text-center">
                         <h2 class="text-[28px] font-semibold leading-[34px]">
-                          Tech Armband
+                          Klassiska Armband
                         </h2>
-                        <p class="text-pro-gray">
-                          Senaste ringen med de senaste funktionerna.
-                        </p>
+                        <p class="text-pro-gray">Klassiska armband.</p>
                       </div>
                     </div>
                     <div
-                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[300px] cursor-pointer snap-always snap-start"
+                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[300px] cursor-pointer snap-always snap-end"
                     >
                       <img
                         class="max-h-[150px] object-contain"
@@ -396,24 +402,24 @@
           src="./assets/template_hero.jpeg"
           alt=""
         />
-        <div class="text-pro-white py-4">
-          <div class="py-2 flex flex-col gap-4">
-            <h1 class="zen-dots text-xl m-0">Ny lorum ipsum</h1>
-            <p class="m-0">
-              Se hit vår nya ring med ännu mer funktioner skapat just för dig.
-              Ringen kommer i 5 olika färger för att passa just din typ.
+        <div class="text-pro-white py-4 flex flex-col gap-8 max-w-[500px]">
+          <div class="py-2 flex flex-col gap-4 md:text-pro-black">
+            <h1 class="zen-dots text-xl m-0 md:text-[64px]">Keep cool</h1>
+            <p class="m-0 md:text-2xl">
+              Nu kan du äntligen gå runt tryggt och lugnt på stan. Men vår nya
+              produkt kan både du och dina anhöriga slappna av.
             </p>
           </div>
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4 md:w-fit md:text-xl">
             <button
-              class="px-4 py-2 bg-gradient-to-r from-pro-dark-purple to-pro-light-purple rounded-full cursor-pointer"
+              class="px-4 md:px-16 py-2 md:py-[6px] bg-gradient-to-r from-pro-dark-purple to-pro-light-purple rounded-full cursor-pointer"
             >
               Läs mer om produkterna
             </button>
             <button
-              class="px-4 py-2 border border-pro-white rounded-full cursor-pointer"
+              class="px-4 md:px-16 py-2 md:py-[6px] border border-pro-white md:border-pro-light-purple md:text-black rounded-full cursor-pointer"
             >
-              Läs mer om produkterna
+              Nyheter
             </button>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import collectionData from "./collectionData";
+
 const menuBtn = document.querySelector("#menu-btn");
 const menuLines = document.querySelectorAll("#menu-btn #menu-line");
 
@@ -18,6 +20,32 @@ const searchForms = document.querySelectorAll("#search");
 const scrollToTop = document.querySelector("#scrollToTop");
 
 const navLinks = document.querySelectorAll("#nav-link");
+
+const collectionNavBtns = document.querySelectorAll("#collection-nav-btn");
+const collectionCards = document.querySelectorAll("#collection-card");
+let collectionType = 0;
+
+const togglePrevCollection = (btn) => {
+  const classList = ["font-semibold", "text-pro-dark-purple"];
+
+  classList.forEach((item) => {
+    btn.classList.toggle(item);
+  });
+};
+
+const toggleCollectionCards = (collection) => {
+  const dataToInsert = collectionData[collection];
+
+  collectionCards.forEach((card, index) => {
+    const { img, title, description } = dataToInsert[index];
+    const [image, texts] = card.children;
+    const [titleText, descriptionText] = texts.children;
+
+    image.src = img;
+    titleText.textContent = title;
+    descriptionText.textContent = description;
+  });
+};
 
 // Smaller drop downs in nav mobile and footer.
 const toggleDropdown = (index) => {
@@ -49,17 +77,29 @@ const toggleDesktopDropdown = (index) => {
   });
 
   if (underline.classList.contains("w-0")) {
+    // Open
     underline.classList.replace("w-0", "w-full");
     dropdown.classList.replace("hidden", "absolute");
     setTimeout(() => {
       dropdownInner.classList.replace("-translate-y-full", "translate-y-0");
     }, 10);
   } else {
+    // Close
     underline.classList.replace("w-full", "w-0");
     dropdownInner.classList.replace("translate-y-0", "-translate-y-full");
     setTimeout(() => {
       dropdown.classList.replace("absolute", "hidden");
     }, 300);
+
+    if (collectionType !== 0) {
+      // remove previous collection class.
+      togglePrevCollection(collectionNavBtns[collectionType].children[0]);
+      collectionType = 0;
+      collectionNavBtns[collectionType].children[0].classList.add(
+        "font-semibold",
+        "text-pro-dark-purple"
+      );
+    }
   }
 };
 
@@ -187,4 +227,19 @@ window.addEventListener("keydown", (ev) => {
     toggleDesktopDropdown(prevDropdownIndex);
     prevDropdownIndex = null;
   }
+});
+
+collectionNavBtns.forEach((collectionBtn, index) => {
+  collectionBtn.addEventListener("click", () => {
+    if (collectionType === index) return;
+
+    // remove previous collection class.
+    togglePrevCollection(collectionNavBtns[collectionType].children[0]);
+
+    // Add class to clicked btn.
+    togglePrevCollection(collectionBtn.children[0]);
+    toggleCollectionCards(index);
+
+    collectionType = index;
+  });
 });
