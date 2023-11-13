@@ -1,7 +1,7 @@
 const collectionData = [
   [
     {
-      img: "assets/classic_ring.png",
+      img: "./assets/classic_ring.png",
       title: "Klassisk Ring",
       description: "Klassisk ring.",
     },
@@ -13,7 +13,7 @@ const collectionData = [
   ],
   [
     {
-      img: "assets/Ring Tech.png",
+      img: "./assets/Ring Tech.png",
       title: "Tech Ring",
       description: "Senaste ringen med de senaste funktionerna.",
     },
