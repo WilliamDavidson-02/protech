@@ -187,7 +187,7 @@
         <!-- Desktop -->
         <div class="hidden md:flex gap-6 text-xl text-pro-black select-none">
           <div id="nav-lg-link" class="group">
-            <a href="#">Våra smycken</a>
+            <a class="font-semibold leading-[30px]" href="#">Våra smycken</a>
             <div
               id="underline"
               class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
@@ -257,7 +257,7 @@
                   >
                     <div
                       id="collection-card"
-                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[350px] cursor-pointer snap-always snap-start"
+                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[340px] cursor-pointer snap-always snap-start"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -279,7 +279,7 @@
                     </div>
                     <div
                       id="collection-card"
-                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[350px] cursor-pointer snap-always snap-start"
+                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[340px] cursor-pointer snap-always snap-start"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -300,7 +300,7 @@
                       </div>
                     </div>
                     <div
-                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[350px] cursor-pointer snap-always snap-end"
+                      class="p-8 bg-pro-white-purple flex flex-col gap-8 w-1/3 min-w-[340px] cursor-pointer snap-always snap-end"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -326,19 +326,19 @@
             </div>
           </div>
           <div class="group">
-            <a href="#">Appen</a>
+            <a class="font-semibold leading-[30px]" href="#">Appen</a>
             <div
               class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
             ></div>
           </div>
           <div class="group">
-            <a href="#">Om oss</a>
+            <a class="font-semibold leading-[30px]" href="#">Om oss</a>
             <div
               class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
             ></div>
           </div>
           <div id="nav-lg-link" class="group">
-            <a href="#">Nyhetsbrev</a>
+            <a class="font-semibold leading-[30px]" href="#">Nyhetsbrev</a>
             <div
               id="underline"
               class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
@@ -401,10 +401,20 @@
           </div>
         </div>
         <div
-          class="hidden md:flex gap-2 items-center text-xl text-pro-black cursor-pointer"
+          id="search-desktop-btn"
+          class="hidden md:flex gap-2 items-center text-xl text-pro-black cursor-pointer select-none transition-all duration-300"
         >
           <span class="material-symbols-outlined"> search </span>
-          <span>Sök</span>
+          <form id="search">
+            <input
+              class="w-10 bg-transparent placeholder:text-pro-black transition-all cursor-pointer duration-300"
+              id="search-input"
+              placeholder="Sök"
+              type="text"
+              autocomplete="off"
+              readonly
+            />
+          </form>
         </div>
       </nav>
     </header>
@@ -415,7 +425,7 @@
       >
         <img
           class="-z-50 absolute top-[60px] md:top-[92px] left-0 h-[calc(100vh-60px)] md:h-[calc(100vh-92px)] object-cover object-left-top w-screen max-w-full"
-          src="./public/template_hero.jpeg"
+          src="/Hero.png"
           alt=""
         />
         <div class="text-pro-white py-4 flex flex-col gap-8 max-w-[500px]">
@@ -441,72 +451,77 @@
         </div>
       </section>
       <!-- Functions section -->
-      <section class="my-16 px-6">
-        <h1 class="zen-dots text-xl mb-2">Funktioner</h1>
-        <div
-          class="flex gap-4 lg:justify-between overflow-auto snap-x snap-mandatory"
-        >
+      <section class="my-16 px-6 mx-auto max-w-[1140px]">
+        <h1 class="zen-dots text-xl md:text-5xl mb-2">Funktioner</h1>
+        <div class="flex gap-4 lg:gap-6 overflow-auto snap-x snap-mandatory">
           <div
             class="flex flex-col shrink-0 gap-4 w-[255px] snap-always snap-start"
           >
-            <img class="w-full" src="public/placholder_img.jpg" alt="" />
-            <div class="px-2">
-              <h2 class="text-lg font-semibold mb-2">Inspelning</h2>
-              <p class="mb-6">
+            <img class="w-full" src="/function-app.jpeg" alt="" />
+            <div class="px-2 flex flex-col flex-grow">
+              <h2 class="text-lg font-semibold mb-2">Appen</h2>
+              <p class="mb-4">
                 Vid larm initierar armbandet en automatisk ljudinspelning. Denna
                 inspelning kan inte raderas och kan delas med rättsväsendet vid
                 behov, vilket kan ge viktig bevisning.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+              >
+                Läs mer
               </button>
             </div>
           </div>
           <div
             class="flex flex-col shrink-0 gap-4 w-[255px] snap-always snap-start"
           >
-            <img class="w-full" src="public/placholder_img.jpg" alt="" />
-            <div class="px-2">
-              <h2 class="text-lg font-semibold mb-2">Inspelning</h2>
-              <p class="mb-6">
+            <img class="w-full" src="/function-ljudinspelning.jpg" alt="" />
+            <div class="px-2 flex flex-col flex-grow">
+              <h2 class="text-lg font-semibold mb-2">Ljudinspelning</h2>
+              <p class="mb-4">
                 Vid larm initierar armbandet en automatisk ljudinspelning. Denna
                 inspelning kan inte raderas och kan delas med rättsväsendet vid
                 behov, vilket kan ge viktig bevisning.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+              >
+                Läs mer
               </button>
             </div>
           </div>
           <div
             class="flex flex-col shrink-0 gap-4 w-[255px] snap-always snap-start"
           >
-            <img class="w-full" src="public/placholder_img.jpg" alt="" />
-            <div class="px-2">
-              <h2 class="text-lg font-semibold mb-2">Inspelning</h2>
-              <p class="mb-6">
-                Vid larm initierar armbandet en automatisk ljudinspelning. Denna
-                inspelning kan inte raderas och kan delas med rättsväsendet vid
-                behov, vilket kan ge viktig bevisning.
+            <img class="w-full" src="/function-nfc.jpg" alt="" />
+            <div class="px-2 flex flex-col flex-grow">
+              <h2 class="text-lg font-semibold mb-2">NFC</h2>
+              <p class="mb-4">
+                Använd våra produkter för att enkelt betala i matbutiken,
+                identifiera dig eller öppna ditt smarta lås hem eller bilen.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+              >
+                Läs mer
               </button>
             </div>
           </div>
           <div
             class="flex flex-col shrink-0 gap-4 w-[255px] snap-always snap-start"
           >
-            <img class="w-full" src="public/placholder_img.jpg" alt="" />
-            <div class="px-2">
-              <h2 class="text-lg font-semibold mb-2">Inspelning</h2>
-              <p class="mb-6">
-                Vid larm initierar armbandet en automatisk ljudinspelning. Denna
-                inspelning kan inte raderas och kan delas med rättsväsendet vid
-                behov, vilket kan ge viktig bevisning.
+            <img class="w-full" src="/function-häla-sömn.jpg" alt="" />
+            <div class="px-2 flex flex-col flex-grow">
+              <h2 class="text-lg font-semibold mb-2">Hälsa och sömn</h2>
+              <p class="mb-4">
+                Tracka dina steg, få statistik över din puls och se över din
+                sömn med våra produkter som kan hjälpa dig till en hälsosammare
+                vardag.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+              >
+                Läs mer
               </button>
             </div>
           </div>
@@ -514,25 +529,34 @@
       </section>
       <!-- To come section -->
       <section>
-        <div class="py-8 px-6 bg-pro-light-gold w-full flex flex-col gap-6">
+        <div
+          class="py-8 px-6 md:py-16 md:px-8 bg-pro-light-gold w-full max-w-[850px] mx-auto flex flex-col gap-6"
+        >
           <div class="flex">
             <div>
-              <h2 class="text-lg font-semibold zen-dots">Kommer snart</h2>
-              <p class="">
-                Nyckelring för barn med gps tracking. Signa upp för nyhetsbrevet
-                för att få info när produkten finns tillgänglig.
+              <h2 class="text-lg md:text-5xl font-semibold zen-dots md:mb-6">
+                Kommer snart
+              </h2>
+              <p class="md:text-xl">
+                Anmäl dig till vårt nyhetsbrev idag för att vara bland de första
+                att få tillgång till denna nya spännande produkt. Samt ta del av
+                exklusiva erbjudanden och håll dig uppdaterad med de senaste
+                nyheterna genom att anmäla dig nedan. Låt oss göra vardagen lite
+                mer färgglad tillsammans!
               </p>
             </div>
-            <div class="relative w-1/3 shrink-0">
+            <div class="relative w-1/3 lg:w-1/4 shrink-0">
               <img
-                class="absolute -top-[80px] -rotate-12"
-                src="public/Test_nyckelring.png"
+                class="max-w-[130px] md:max-w-[230px] absolute -top-[100px] md:-top-[200px] -rotate-[10deg] md:rotate-[28deg] right-0 md:-right-8 lg:-right-16"
+                src="/Keychain.png"
                 alt=""
               />
             </div>
           </div>
-          <div class="flex justify-center">
-            <button class="py-2 px-4 bg-pro-gold text-pro-white rounded-full">
+          <div class="flex justify-center md:justify-start">
+            <button
+              class="py-2 px-4 md:px-8 bg-pro-light-purple text-pro-white rounded-full md:text-xl"
+            >
               Gå med i Nyhetsbrevet
             </button>
           </div>
@@ -548,15 +572,17 @@
             class="flex flex-col shrink-0 gap-4 w-[255px] snap-always snap-start"
           >
             <img class="w-full" src="public/placholder_img.jpg" alt="" />
-            <div class="px-2">
+            <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-lg font-semibold mb-2">Inspelning</h2>
               <p class="mb-6">
                 Vid larm initierar armbandet en automatisk ljudinspelning. Denna
                 inspelning kan inte raderas och kan delas med rättsväsendet vid
                 behov, vilket kan ge viktig bevisning.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+              >
+                Köp nu
               </button>
             </div>
           </div>
@@ -571,8 +597,10 @@
                 inspelning kan inte raderas och kan delas med rättsväsendet vid
                 behov, vilket kan ge viktig bevisning.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+              >
+                Köp nu
               </button>
             </div>
           </div>
@@ -587,8 +615,10 @@
                 inspelning kan inte raderas och kan delas med rättsväsendet vid
                 behov, vilket kan ge viktig bevisning.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+              >
+                Köp nu
               </button>
             </div>
           </div>
@@ -603,8 +633,10 @@
                 inspelning kan inte raderas och kan delas med rättsväsendet vid
                 behov, vilket kan ge viktig bevisning.
               </p>
-              <button class="bg-pro-gold py-1 px-2 rounded-full">
-                Läs mer här
+              <button
+                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+              >
+                Köp nu
               </button>
             </div>
           </div>

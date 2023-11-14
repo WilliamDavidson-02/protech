@@ -14,9 +14,9 @@ const underlines = document.querySelectorAll("#underline");
 let prevDropdownIndex = null;
 
 const forms = document.querySelectorAll("#form");
-const emails = document.querySelectorAll("#email");
 
 const searchForms = document.querySelectorAll("#search");
+const searchDesktopBtn = document.querySelector("#search-desktop-btn");
 
 const scrollToTop = document.querySelector("#scrollToTop");
 
@@ -254,4 +254,28 @@ collectionNavBtns.forEach((collectionBtn, index) => {
 
     collectionType = index;
   });
+});
+
+searchDesktopBtn.addEventListener("click", () => {
+  const searchDesktop = searchDesktopBtn.querySelector("#search-input");
+
+  searchDesktop.readOnly = !searchDesktop.readOnly;
+
+  if (!searchDesktop.readOnly) {
+    searchDesktop.focus();
+  }
+
+  searchDesktop.addEventListener("click", (ev) => {
+    if (!searchDesktop.readOnly) ev.stopPropagation();
+  });
+
+  searchDesktop.classList.toggle("cursor-pointer");
+
+  if (searchDesktopBtn.classList.contains("bg-white")) {
+    searchDesktopBtn.classList.remove("bg-white", "px-3", "rounded-full");
+    searchDesktop.classList.replace("w-36", "w-10");
+  } else {
+    searchDesktopBtn.classList.add("bg-white", "px-3", "rounded-full");
+    searchDesktop.classList.replace("w-10", "w-36");
+  }
 });
