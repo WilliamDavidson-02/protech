@@ -1,7 +1,9 @@
-import classicRing from "./public/classic_ring.png";
-import classicBracelet from "./public/Custom Classic Gold.png";
-import techRing from "./public/Ring Tech.png";
-import techBracelet from "./public/Ring Tech 2.png";
+import classicRing from "/classic_ring.png";
+import classicBracelet from "/Custom Classic Gold.png";
+import techRing from "/Ring Tech.png";
+import techBracelet from "/Ring Tech 2.png";
+
+// Vercel renames images for optimized urls, there for regular pathname dose not work it will return 404.
 
 const collectionData = [
   [

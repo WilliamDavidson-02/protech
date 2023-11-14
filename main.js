@@ -14,12 +14,11 @@ const underlines = document.querySelectorAll("#underline");
 let prevDropdownIndex = null;
 
 const forms = document.querySelectorAll("#form");
+const emails = document.querySelectorAll("#email");
 
 const searchForms = document.querySelectorAll("#search");
 
 const scrollToTop = document.querySelector("#scrollToTop");
-
-const navLinks = document.querySelectorAll("#nav-link");
 
 const collectionNavBtns = document.querySelectorAll("#collection-nav-btn");
 const collectionCards = document.querySelectorAll("#collection-card");
@@ -37,13 +36,24 @@ const toggleCollectionCards = (collection) => {
   const dataToInsert = collectionData[collection];
 
   collectionCards.forEach((card, index) => {
-    const { img, title, description } = dataToInsert[index];
     const [image, texts] = card.children;
     const [titleText, descriptionText] = texts.children;
 
-    image.src = img;
-    titleText.textContent = title;
-    descriptionText.textContent = description;
+    const { img, title, description } = dataToInsert[index];
+
+    image.classList.add("opacity-0");
+    titleText.classList.add("opacity-0");
+    descriptionText.classList.add("opacity-0");
+
+    setTimeout(() => {
+      image.src = img;
+      titleText.textContent = title;
+      descriptionText.textContent = description;
+
+      image.classList.remove("opacity-0");
+      titleText.classList.remove("opacity-0");
+      descriptionText.classList.remove("opacity-0");
+    }, 300);
   });
 };
 
@@ -94,6 +104,8 @@ const toggleDesktopDropdown = (index) => {
     if (collectionType !== 0) {
       // remove previous collection class.
       togglePrevCollection(collectionNavBtns[collectionType].children[0]);
+      toggleCollectionCards(collectionType);
+      toggleCollectionCards(0);
       collectionType = 0;
       collectionNavBtns[collectionType].children[0].classList.add(
         "font-semibold",
@@ -222,8 +234,8 @@ navLgLinks.forEach((link, index) => {
 
 window.addEventListener("keydown", (ev) => {
   // Esc key to close desktop dropdown.
-  ev.preventDefault();
   if (ev.key === "Escape") {
+    ev.preventDefault();
     toggleDesktopDropdown(prevDropdownIndex);
     prevDropdownIndex = null;
   }
