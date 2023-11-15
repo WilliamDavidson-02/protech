@@ -197,11 +197,11 @@ forms.forEach((form) => {
     const emailRegxp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     if (emailRegxp.test(email.value)) {
+      email.value = "";
       emailIcon.classList.add("text-green-500");
       setTimeout(() => {
         emailIcon.classList.remove("text-green-500");
       }, 2000);
-      email.value = "";
     } else {
       emailIcon.classList.add("text-red-500", "animate-shake");
       setTimeout(() => {
