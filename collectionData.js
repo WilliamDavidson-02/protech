@@ -1,7 +1,7 @@
-import classicRing from "/classic_ring.png";
-import classicBracelet from "/Custom Classic Gold.png";
-import techRing from "/Ring Tech.png";
-import techBracelet from "/Ring Tech 2.png";
+import classicRing from "/Preview_Classic_Gold.png";
+import classicBracelet from "/Classy_Gold.png";
+import techRing from "/Preview_Tech_Black.png";
+import techBracelet from "/Tech_Dark.png";
 
 // Vercel renames images for optimized urls, there for regular pathname dose not work it will return 404.
 

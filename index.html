@@ -19,7 +19,7 @@
     <title>Protech</title>
   </head>
   <body class="bg-pro-white">
-    <header class="relative w-full bg-pro-white z-50">
+    <header class="fixed w-full bg-pro-white z-50">
       <aside
         id="aside-container"
         class="hidden w-screen h-[calc(100vh-57px)] absolute left-0 top-full overflow-hidden"
@@ -165,7 +165,7 @@
       <nav
         class="flex justify-between items-center max-w-[1440px] mx-auto px-6 py-4 md:py-8 bg-pro-white"
       >
-        <img class="max-w-[230px]" src="./public/logga-lggande-2.svg" alt="" />
+        <img class="md:w-[180px]" src="./public/logga-lggande-2.svg" alt="" />
         <!-- Mobile -->
         <div
           id="menu-btn"
@@ -190,7 +190,7 @@
             <a class="font-semibold leading-[30px]" href="#">Våra smycken</a>
             <div
               id="underline"
-              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
             ></div>
             <div
               id="nav-lg-dropdown"
@@ -261,7 +261,7 @@
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
-                        src="/classic_ring.png"
+                        src="/Preview_Classic_Gold.png"
                         alt=""
                       />
                       <div class="text-center">
@@ -283,7 +283,7 @@
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
-                        src="/Custom Classic Gold.png"
+                        src="/Classy_Gold.png"
                         alt=""
                       />
                       <div class="text-center">
@@ -328,20 +328,20 @@
           <div class="group">
             <a class="font-semibold leading-[30px]" href="#">Appen</a>
             <div
-              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
             ></div>
           </div>
           <div class="group">
             <a class="font-semibold leading-[30px]" href="#">Om oss</a>
             <div
-              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
             ></div>
           </div>
           <div id="nav-lg-link" class="group">
             <a class="font-semibold leading-[30px]" href="#">Nyhetsbrev</a>
             <div
               id="underline"
-              class="h-[2px] w-0 group-hover:w-full bg-pro-black transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
             ></div>
             <div
               id="nav-lg-dropdown"
@@ -421,10 +421,10 @@
     <main class="max-w-[1440px] w-full mx-auto overflow-hidden">
       <!-- Hero Section -->
       <section
-        class="h-[calc(100vh-60px)] md:h-[calc(100vh-92px)] flex md:justify-end justify-center md:items-center items-end px-6"
+        class="h-screen flex md:justify-end justify-center md:items-center items-end px-6"
       >
         <img
-          class="-z-50 absolute top-[60px] md:top-[92px] left-0 h-[calc(100vh-60px)] md:h-[calc(100vh-92px)] object-cover object-left-top w-screen max-w-full"
+          class="-z-50 absolute top-0 left-0 h-screen object-cover object-left-top w-screen max-w-full"
           src="/Hero.png"
           alt=""
         />
@@ -438,12 +438,12 @@
           </div>
           <div class="flex flex-col gap-4 md:w-fit md:text-xl">
             <button
-              class="px-4 md:px-16 py-2 md:py-[6px] bg-gradient-to-r from-pro-dark-purple to-pro-light-purple rounded-full cursor-pointer"
+              class="px-4 md:px-16 py-2 md:py-[6px] bg-pro-light-purple hover:bg-pro-gold transition-colors duration-300 hover:text-pro-black rounded-full cursor-pointer"
             >
               Läs mer om produkterna
             </button>
             <button
-              class="px-4 md:px-16 py-2 md:py-[6px] border border-pro-white md:border-pro-light-purple md:text-black rounded-full cursor-pointer"
+              class="px-4 md:px-16 py-2 md:py-[6px] border border-pro-light-purple hover:border-pro-gold transition-colors duration-300 md:text-black rounded-full cursor-pointer"
             >
               Gå med i nyhetsbrevet
             </button>
@@ -451,7 +451,7 @@
         </div>
       </section>
       <!-- Functions section -->
-      <section class="my-16 px-6 mx-auto max-w-[1140px]">
+      <section class="my-16 md:my-32 px-6 mx-auto max-w-[1140px]">
         <h1 class="zen-dots text-xl md:text-5xl mb-2">Funktioner</h1>
         <div class="flex gap-4 lg:gap-6 overflow-auto snap-x snap-mandatory">
           <div
@@ -555,7 +555,7 @@
           </div>
           <div class="flex justify-center md:justify-start">
             <button
-              class="py-2 px-4 md:px-8 bg-pro-light-purple text-pro-white rounded-full md:text-xl"
+              class="py-2 px-4 md:px-8 bg-pro-light-purple hover:bg-pro-gold transition-colors duration-300 text-pro-white rounded-full md:text-xl"
             >
               Gå med i Nyhetsbrevet
             </button>
@@ -563,7 +563,7 @@
         </div>
       </section>
       <!-- Products section -->
-      <section class="my-16 px-6 mx-auto max-w-[1140px]">
+      <section class="my-16 md:my-32 px-6 mx-auto max-w-[1140px]">
         <h1 class="zen-dots text-xl md:text-5xl mb-2">Produkter</h1>
         <div class="flex gap-4 lg:gap-6 overflow-auto snap-x snap-mandatory">
           <div
@@ -601,7 +601,9 @@
                 >
                   Köp nu
                 </button>
-                <div class="underline cursor-pointer text-pro-gray">
+                <div
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                >
                   Läs mer
                 </div>
               </div>
@@ -642,7 +644,9 @@
                 >
                   Köp nu
                 </button>
-                <div class="underline cursor-pointer text-pro-gray">
+                <div
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                >
                   Läs mer
                 </div>
               </div>
@@ -682,7 +686,9 @@
                 >
                   Köp nu
                 </button>
-                <div class="underline cursor-pointer text-pro-gray">
+                <div
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                >
                   Läs mer
                 </div>
               </div>
@@ -723,7 +729,9 @@
                 >
                   Köp nu
                 </button>
-                <div class="underline cursor-pointer text-pro-gray">
+                <div
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                >
                   Läs mer
                 </div>
               </div>
@@ -763,11 +771,11 @@
       </section>
     </main>
     <footer
-      class="mt-16 px-6 pt-16 pb-8 lg:pb-32 bg-pro-white-purple flex flex-col items-center"
+      class="mt-16 md:mt-32 px-6 pt-16 pb-8 lg:pb-32 bg-pro-white-purple flex flex-col items-center"
     >
       <button
         id="scrollToTop"
-        class="cursor-pointer py-2 px-16 bg-gradient-to-r from-pro-dark-purple to-pro-light-purple rounded-full text-pro-white flex items-center text-sm mb-12 lg:text-xl"
+        class="cursor-pointer py-2 px-16 bg-pro-light-purple hover:bg-pro-gold hover:text-pro-black transition-all duration-300 rounded-full text-pro-white flex items-center text-sm mb-12 lg:text-xl"
       >
         <span>Till toppen</span>
         <span class="material-symbols-outlined flex items-center">
