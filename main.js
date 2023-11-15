@@ -24,6 +24,10 @@ const collectionNavBtns = document.querySelectorAll("#collection-nav-btn");
 const collectionCards = document.querySelectorAll("#collection-card");
 let collectionType = 0;
 
+const selectColorContainers = document.querySelectorAll(
+  "#select-color-container"
+);
+
 const togglePrevCollection = (btn) => {
   const classList = ["font-semibold", "text-pro-dark-purple"];
 
@@ -278,4 +282,18 @@ searchDesktopBtn.addEventListener("click", () => {
     searchDesktopBtn.classList.add("bg-white", "px-3", "rounded-full");
     searchDesktop.classList.replace("w-10", "w-36");
   }
+});
+
+selectColorContainers.forEach((container) => {
+  const colors = [...container.children];
+  colors.forEach((color) => {
+    color.addEventListener("click", () => {
+      colors.forEach((prevColor) => {
+        if (!prevColor.classList.contains("border-2")) return;
+        prevColor.classList.remove("border-2", "border-pro-light-purple");
+      });
+
+      color.classList.add("border-2", "border-pro-light-purple");
+    });
+  });
 });
