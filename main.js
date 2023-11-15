@@ -1,4 +1,5 @@
 import collectionData from "./collectionData";
+import productsData from "./products";
 
 const menuBtn = document.querySelector("#menu-btn");
 const menuLines = document.querySelectorAll("#menu-btn #menu-line");
@@ -27,6 +28,7 @@ let collectionType = 0;
 const selectColorContainers = document.querySelectorAll(
   "#select-color-container"
 );
+const productImages = document.querySelectorAll("#product-img");
 
 const togglePrevCollection = (btn) => {
   const classList = ["font-semibold", "text-pro-dark-purple"];
@@ -284,9 +286,9 @@ searchDesktopBtn.addEventListener("click", () => {
   }
 });
 
-selectColorContainers.forEach((container) => {
+selectColorContainers.forEach((container, prodIndex) => {
   const colors = [...container.children];
-  colors.forEach((color) => {
+  colors.forEach((color, colorIndex) => {
     color.addEventListener("click", () => {
       colors.forEach((prevColor) => {
         if (!prevColor.classList.contains("border-2")) return;
@@ -294,6 +296,8 @@ selectColorContainers.forEach((container) => {
       });
 
       color.classList.add("border-2", "border-pro-light-purple");
+
+      productImages[prodIndex].src = productsData[prodIndex][colorIndex];
     });
   });
 });
