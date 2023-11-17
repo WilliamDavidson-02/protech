@@ -53,37 +53,48 @@ let isMouseDown = false;
 let prevDirectionY = 0;
 let prevDirectionX = 0;
 
-const onMouseDown = (ev) => {
+const onPointerDown = (ev) => {
   ev.preventDefault();
   isMouseDown = true;
+
+  // Use either mouse or touch event to get coordinates
+  const { clientX, clientY } = ev.touches ? ev.touches[0] : ev;
+
+  prevDirectionX = clientX;
+  prevDirectionY = clientY;
 };
-const onMouseUp = (ev) => {
+
+const onPointerUp = (ev) => {
   ev.preventDefault();
   isMouseDown = false;
   prevDirectionX = 0;
   prevDirectionY = 0;
 };
-const onMouseMove = (ev) => {
-  if (!isMouseDown) return;
+
+const onPointerMove = (ev) => {
   ev.preventDefault();
+  if (!isMouseDown) return;
 
   const damping = 0.03;
   const speed = 0.5;
 
-  if (prevDirectionX < ev.clientY) {
+  // Use either mouse or touch event to get coordinates
+  const { clientX, clientY } = ev.touches ? ev.touches[0] : ev;
+
+  if (prevDirectionX < clientY) {
     keyChain.rotation.x += speed * damping;
   } else {
     keyChain.rotation.x -= speed * damping;
   }
 
-  if (prevDirectionY < ev.clientX) {
+  if (prevDirectionY < clientX) {
     keyChain.rotation.y += speed * damping;
   } else {
     keyChain.rotation.y -= speed * damping;
   }
 
-  prevDirectionY = ev.clientX;
-  prevDirectionX = ev.clientY;
+  prevDirectionY = clientX;
+  prevDirectionX = clientY;
 };
 
 function animate() {
@@ -112,6 +123,6 @@ window.addEventListener("resize", () => {
   renderer.setSize(toComeCanvas.clientWidth, toComeCanvas.clientHeight);
 });
 
-toComeCanvas.addEventListener("mousedown", onMouseDown);
-window.addEventListener("mouseup", onMouseUp);
-window.addEventListener("mousemove", onMouseMove);
+toComeCanvas.addEventListener("pointerdown", onPointerDown, { passive: false });
+window.addEventListener("pointerup", onPointerUp, { passive: false });
+window.addEventListener("pointermove", onPointerMove, { passive: false });
