@@ -126,5 +126,5 @@ window.addEventListener("mouseup", onPointerUp);
 window.addEventListener("mousemove", onPointerMove);
 
 toComeCanvas.addEventListener("touchstart", onPointerDown);
-window.addEventListener("touchend", onPointerUp);
+toComeCanvas.addEventListener("touchend", onPointerUp);
 window.addEventListener("touchmove", onPointerMove, { passive: false });
