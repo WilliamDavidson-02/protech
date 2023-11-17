@@ -70,8 +70,8 @@ const onPointerUp = (ev) => {
 };
 
 const onPointerMove = (ev) => {
-  ev.preventDefault();
   if (!isMouseDown) return;
+  ev.preventDefault();
 
   const damping = 0.03;
   const speed = 0.5;
@@ -125,6 +125,6 @@ toComeCanvas.addEventListener("mousedown", onPointerDown);
 window.addEventListener("mouseup", onPointerUp);
 window.addEventListener("mouseMove", onPointerMove);
 
-toComeCanvas.addEventListener("touchstart", onPointerDown, { passive: false });
-window.addEventListener("touchend", onPointerUp, { passive: false });
+toComeCanvas.addEventListener("touchstart", onPointerDown);
+window.addEventListener("touchend", onPointerUp);
 window.addEventListener("touchmove", onPointerMove, { passive: false });
