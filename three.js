@@ -123,7 +123,7 @@ window.addEventListener("resize", () => {
 
 toComeCanvas.addEventListener("mousedown", onPointerDown);
 window.addEventListener("mouseup", onPointerUp);
-window.addEventListener("mouseMove", onPointerMove);
+window.addEventListener("mousemove", onPointerMove);
 
 toComeCanvas.addEventListener("touchstart", onPointerDown);
 window.addEventListener("touchend", onPointerUp);
