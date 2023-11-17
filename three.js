@@ -67,8 +67,6 @@ const onPointerDown = (ev) => {
 const onPointerUp = (ev) => {
   ev.preventDefault();
   isMouseDown = false;
-  prevDirectionX = 0;
-  prevDirectionY = 0;
 };
 
 const onPointerMove = (ev) => {
@@ -123,6 +121,10 @@ window.addEventListener("resize", () => {
   renderer.setSize(toComeCanvas.clientWidth, toComeCanvas.clientHeight);
 });
 
-toComeCanvas.addEventListener("pointerdown", onPointerDown, { passive: false });
-window.addEventListener("pointerup", onPointerUp, { passive: false });
-window.addEventListener("pointermove", onPointerMove, { passive: false });
+toComeCanvas.addEventListener("mousedown", onPointerDown);
+window.addEventListener("mouseup", onPointerUp);
+window.addEventListener("mouseMove", onPointerMove);
+
+toComeCanvas.addEventListener("touchstart", onPointerDown, { passive: false });
+window.addEventListener("touchend", onPointerUp, { passive: false });
+window.addEventListener("touchmove", onPointerMove, { passive: false });
