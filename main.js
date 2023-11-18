@@ -30,12 +30,13 @@ const selectColorContainers = document.querySelectorAll(
 );
 const productImages = document.querySelectorAll("#product-img");
 
+// Toggles desktop dropdown collection links.
 const togglePrevCollection = (btn) => {
-  const classList = ["font-semibold", "text-pro-dark-purple"];
-
-  classList.forEach((item) => {
-    btn.classList.toggle(item);
-  });
+  if (!btn.classList.contains("font-semibold")) {
+    btn.classList.add("font-semibold", "text-pro-dark-purple");
+  } else {
+    btn.classList.remove("font-semibold", "text-pro-dark-purple");
+  }
 };
 
 const toggleCollectionCards = (collection) => {
@@ -110,6 +111,7 @@ const toggleDesktopDropdown = (index) => {
     if (collectionType !== 0) {
       // remove previous collection class.
       togglePrevCollection(collectionNavBtns[collectionType].children[0]);
+
       toggleCollectionCards(collectionType);
       toggleCollectionCards(0);
       collectionType = 0;
@@ -123,6 +125,7 @@ const toggleDesktopDropdown = (index) => {
 
 const toggleMenuBar = () => {
   const [firstLine, secondLine, thirdLine] = menuLines;
+  // Toggles mobile side menu
   if (!aSideContainer.classList.contains("hidden")) {
     aSideInner.classList.replace("translate-x-0", "translate-x-full");
     setTimeout(() => {
@@ -172,6 +175,7 @@ const toggleMenuBar = () => {
 
 menuBtn.addEventListener("click", toggleMenuBar);
 window.addEventListener("resize", () => {
+  // If window is resized close side menu/dropdown
   if ((window.innerWidth > 768) & menuLines[1].classList.contains("w-0")) {
     toggleMenuBar();
   }
