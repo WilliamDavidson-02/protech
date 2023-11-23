@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { RectAreaLightUniformsLib } from "three/addons/lights/RectAreaLightUniformsLib.js";
 
 // Convert degrees to radians
 const toRadians = (degrees) => {
@@ -38,29 +37,27 @@ let keyChain;
 const loader = new GLTFLoader();
 loader.load("/Keychain.gltf", (gltf) => {
   keyChain = gltf.scene.children[0];
-  keyChain.scale.set(0.7, 0.7, 0.7);
+  keyChain.scale.set(0.9, 0.9, 0.9);
 
-  keyChain.position.y = -1;
+  keyChain.position.y = -1.4;
   scene.add(gltf.scene);
 
   animate();
 });
 
 let isMouseDown = false;
-let prevDirectionY = 0;
 let prevDirectionX = 0;
+let prevTime;
 const damping = 0.03;
-const speed = 0.5;
 
 const onPointerDown = (ev) => {
   ev.preventDefault();
   isMouseDown = true;
 
   //  Client x & y for mouse and touch
-  const { clientX, clientY } = ev.touches ? ev.touches[0] : ev;
+  const { clientY } = ev.touches ? ev.touches[0] : ev;
 
-  prevDirectionX = clientX;
-  prevDirectionY = clientY;
+  prevDirectionX = clientY;
 };
 
 const onPointerUp = (ev) => {
@@ -72,23 +69,26 @@ const onPointerMove = (ev) => {
   if (!isMouseDown) return;
   ev.preventDefault();
 
-  //  Client x & y for mouse and touch
-  const { clientX, clientY } = ev.touches ? ev.touches[0] : ev;
+  const { clientX } = ev.touches ? ev.touches[0] : ev;
+  const timestamp = Date.now();
 
-  if (prevDirectionX < clientY) {
-    keyChain.rotation.x += speed * damping;
-  } else {
-    keyChain.rotation.x -= speed * damping;
-  }
+  if (prevDirectionX !== undefined && prevTime !== undefined) {
+    const deltaX = clientX - prevDirectionX;
+    const deltaTime = timestamp - prevTime;
 
-  if (prevDirectionY < clientX) {
+    // Adjust speed based on mouse movement speed
+    let speed = deltaX / deltaTime;
+
+    // Set a minimum speed threshold, checks speed regardless of if speed is negative or positive
+    // minSpeed * Math.sign(speed), sign(speed) return 1 for positive number -1 for negative and 0 for 0 there for keeping the same direction for the speed.
+    const minSpeed = 1.2;
+    speed = Math.abs(speed) < minSpeed ? minSpeed * Math.sign(speed) : speed;
+
     keyChain.rotation.y += speed * damping;
-  } else {
-    keyChain.rotation.y -= speed * damping;
   }
 
-  prevDirectionY = clientX;
-  prevDirectionX = clientY;
+  prevDirectionX = clientX;
+  prevTime = timestamp;
 };
 
 function animate() {
@@ -100,12 +100,6 @@ function animate() {
       keyChain.rotation.y -= keyChain.rotation.y * damping;
     } else {
       keyChain.rotation.y = 0;
-    }
-
-    if (Math.abs(keyChain.rotation.x) > toRadians(0.1)) {
-      keyChain.rotation.x -= keyChain.rotation.x * damping;
-    } else {
-      keyChain.rotation.x = 0;
     }
   }
 
