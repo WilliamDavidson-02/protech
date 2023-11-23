@@ -32,6 +32,10 @@ const productImages = document.querySelectorAll("#product-img");
 
 const scrollToProducts = document.querySelector("#scroll-to-products");
 
+const toggleEnterEmailToCome = document.querySelector(
+  "#toggle-enter-email-to-come"
+);
+
 // Toggles desktop dropdown collection links.
 const togglePrevCollection = (btn) => {
   if (!btn.classList.contains("font-semibold")) {
@@ -313,3 +317,30 @@ scrollToProducts.addEventListener("click", () =>
     .querySelector("#products-section")
     .scrollIntoView({ behavior: "smooth", block: "center" })
 );
+
+toggleEnterEmailToCome.addEventListener("click", () => {
+  const form = toggleEnterEmailToCome.querySelector("#form");
+  const submitBtn = document.querySelector("#toggle-enter-email-submit");
+
+  form.addEventListener("click", (ev) => {
+    ev.stopPropagation();
+  });
+
+  form.classList.replace("hidden", "flex");
+  submitBtn.classList.toggle("hidden");
+
+  setTimeout(() => {
+    form.classList.replace("opacity-0", "opacity-100");
+    submitBtn.classList.replace("opacity-0", "opacity-100");
+  }, 10);
+
+  submitBtn.addEventListener("click", () => {
+    form.classList.replace("opacity-100", "opacity-0");
+    submitBtn.classList.replace("opacity-100", "opacity-0");
+
+    setTimeout(() => {
+      form.classList.replace("flex", "hidden");
+      submitBtn.classList.toggle("hidden");
+    }, 300);
+  });
+});

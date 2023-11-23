@@ -567,9 +567,39 @@
               </p>
               <div class="flex justify-center md:justify-start mt-6">
                 <button
-                  class="py-2 px-4 md:px-8 bg-pro-light-purple hover:bg-pro-gold transition-colors duration-300 text-pro-white rounded-full md:text-xl shadow-proBtn"
+                  id="toggle-enter-email-to-come"
+                  class="relative py-2 px-4 md:px-8 bg-pro-light-purple hover:bg-pro-gold transition-colors duration-300 text-pro-white rounded-full md:text-xl shadow-proBtn"
                 >
-                  Gå med i Nyhetsbrevet
+                  <span>Gå med i Nyhetsbrevet</span>
+                  <form
+                    id="form"
+                    class="absolute opacity-0 transition-opacity duration-300 top-0 left-0 bg-white hidden gap-[10px] items-centre p-2 rounded-full w-full"
+                  >
+                    <span
+                      id="emailIcon"
+                      class="material-symbols-outlined flex items-center text-pro-black"
+                    >
+                      mail
+                    </span>
+                    <input
+                      id="email"
+                      autocomplete="off"
+                      class="flex-grow placeholder:text-pro-gray text-pro-black"
+                      type="text"
+                      placeholder="name@mail.com"
+                    />
+                    <button
+                      type="submit"
+                      class="ml-10 hidden opacity-0 transition-opacity duration-300"
+                      id="toggle-enter-email-submit"
+                    >
+                      <span
+                        class="material-symbols-outlined flex items-center cursor-pointer"
+                      >
+                        arrow_forward
+                      </span>
+                    </button>
+                  </form>
                 </button>
               </div>
             </div>
