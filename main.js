@@ -30,6 +30,8 @@ const selectColorContainers = document.querySelectorAll(
 );
 const productImages = document.querySelectorAll("#product-img");
 
+const scrollToProducts = document.querySelector("#scroll-to-products");
+
 // Toggles desktop dropdown collection links.
 const togglePrevCollection = (btn) => {
   if (!btn.classList.contains("font-semibold")) {
@@ -305,3 +307,9 @@ selectColorContainers.forEach((container, prodIndex) => {
     });
   });
 });
+
+scrollToProducts.addEventListener("click", () =>
+  document
+    .querySelector("#products-section")
+    .scrollIntoView({ behavior: "smooth", block: "center" })
+);

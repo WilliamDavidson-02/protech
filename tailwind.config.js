@@ -13,6 +13,9 @@ export default {
       animation: {
         shake: "shake 0.5s ease-in-out forwards",
       },
+      boxShadow: {
+        proBtn: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+      },
       colors: {
         "pro-black": "#1D1D1F",
         "pro-gray": "#86868B",
