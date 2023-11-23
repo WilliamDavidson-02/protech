@@ -1,6 +1,9 @@
-import classicGoldRing from "/Preview_Tech_Gold.png";
-import classicChromeRing from "/Preview_Tech_Chrome.png";
-import classicBlackRing from "/Preview_Tech_Black.png";
+import techGoldRing from "/Preview_Tech_Gold.png";
+import techChromeRing from "/Preview_Tech_Chrome.png";
+import techBlackRing from "/Preview_Tech_Black.png";
+import classicGoldRing from "/Preview_Classic_Gold.png";
+import classicChromeRing from "/Preview_Classic_Chrome.png";
+import classicBlackRing from "/Preview_Classic_Black.png";
 import techGold from "/Tech_Gold.png";
 import techSilver from "/Tech_Silver.png";
 import techDark from "/Tech_Dark.png";
@@ -15,6 +18,7 @@ const productsData = [
   [classicGold, classicSilver, classicDark],
   [techGold, techSilver, techDark],
   [classicGoldRing, classicChromeRing, classicBlackRing],
+  [techGoldRing, techChromeRing, techBlackRing],
   [manchGold, manchSilver, manchDark],
 ];
 
