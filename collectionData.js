@@ -1,33 +1,36 @@
-import classicRing from "/Preview_Classic_Gold.png";
-import classicBracelet from "/Classy_Gold.png";
-import techRing from "/Preview_Tech_Black.png";
-import techBracelet from "/Tech_Dark.png";
-
-// Vercel renames images for optimized urls, there for regular pathname dose not work it will return 404.
-
 const collectionData = [
   [
     {
-      img: classicRing,
+      img: "/Preview_Classic_Gold.png",
       title: "Klassisk Ring",
-      description: "Klassisk ring.",
+      description: "Upplev tidlös elegans",
     },
     {
-      img: classicBracelet,
+      img: "/Classy_Gold.png",
       title: "Klassiskt Armband",
-      description: "Klassisk armband.",
+      description: "Upplev tidlös elegans",
+    },
+    {
+      img: "/Ring Tech 3.png",
+      title: "Se alla",
+      description: "Upplev tidlös elegans",
     },
   ],
   [
     {
-      img: techRing,
+      img: "/Preview_Tech_Black.png",
       title: "Tech Ring",
-      description: "Senaste ringen med de senaste funktionerna.",
+      description: "En revolution i minimalism och teknik!",
     },
     {
-      img: techBracelet,
+      img: "/Tech_Dark.png",
       title: "Tech Armband",
-      description: "Senaste ringen med de senaste funktionerna.",
+      description: "En revolution i minimalism och teknik!",
+    },
+    {
+      img: "/Ring Tech 3.png",
+      title: "Se alla",
+      description: "En revolution i minimalism och teknik!",
     },
   ],
 ];

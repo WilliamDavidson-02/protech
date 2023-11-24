@@ -1,5 +1,4 @@
 import collectionData from "./collectionData";
-import productsData from "./products";
 
 const menuBtn = document.querySelector("#menu-btn");
 const menuLines = document.querySelectorAll("#menu-btn #menu-line");
@@ -36,6 +35,10 @@ const toggleEnterEmailToCome = document.querySelector(
   "#toggle-enter-email-to-come"
 );
 
+const productCardContainer = document.querySelectorAll(
+  "#product-card-container"
+);
+
 // Toggles desktop dropdown collection links.
 const togglePrevCollection = (btn) => {
   if (!btn.classList.contains("font-semibold")) {
@@ -58,8 +61,9 @@ const toggleCollectionCards = (collection) => {
     titleText.classList.add("opacity-0");
     descriptionText.classList.add("opacity-0");
 
-    setTimeout(() => {
-      image.src = img;
+    setTimeout(async () => {
+      const newImage = await import(img);
+      image.src = newImage.default;
       titleText.textContent = title;
       descriptionText.textContent = description;
 
@@ -303,13 +307,37 @@ searchDesktopBtn.addEventListener("click", () => {
 selectColorContainers.forEach((container, prodIndex) => {
   const colors = [...container.children];
   colors.forEach((color, colorIndex) => {
-    color.addEventListener("click", () => {
+    color.addEventListener("click", async () => {
       colors.forEach((prevColor) => {
         if (!prevColor.classList.contains("border-2")) return;
         prevColor.classList.remove("border-2", "border-pro-light-purple");
       });
 
       color.classList.add("border-2", "border-pro-light-purple");
+
+      const productsData = [
+        ["/Classy_Gold.png", "/Classy_Silver.png", "/Classy_Dark.png"],
+        ["/Tech_Gold.png", "/Tech_Silver.png", "/Tech_Dark.png"],
+        [
+          "/Preview_Classic_Gold.png",
+          "/Preview_Classic_Chrome.png",
+          "/Preview_Classic_Black.png",
+        ],
+        [
+          "/Preview_Tech_Gold.png",
+          "/Preview_Tech_Chrome.png",
+          "/Preview_Tech_Black.png",
+        ],
+        ["/Manch_Gold.png", "/Manch_Silver.png", "/Manch_Dark.png"],
+      ];
+
+      const productImage = productImages[prodIndex];
+
+      const imagePath = productsData[prodIndex][colorIndex];
+      const imgModule = await import(imagePath);
+      const imgSrc = imgModule.default;
+
+      productImage.src = imgSrc;
 
       productImages[prodIndex].src = productsData[prodIndex][colorIndex];
     });
@@ -348,5 +376,18 @@ toggleEnterEmailToCome.addEventListener("click", () => {
       form.classList.replace("flex", "hidden");
       submitBtn.classList.toggle("hidden");
     }, 300);
+  });
+});
+
+productCardContainer.forEach((productCard) => {
+  const paragraph = productCard.querySelector("#product-card-paragraph");
+  const readMore = productCard.querySelector("#product-card-read-more");
+
+  readMore.addEventListener("click", () => {
+    if (paragraph.clientHeight === 144) {
+      paragraph.style.height = `${paragraph.scrollHeight}px`;
+    } else {
+      paragraph.style.height = `144px`;
+    }
   });
 });

@@ -261,7 +261,7 @@
                   >
                     <div
                       id="collection-card"
-                      class="py-2 bg-pro-white-purple flex flex-col gap-8 min-w-[280px] cursor-pointer snap-always snap-start"
+                      class="py-2 bg-pro-white-purple flex flex-col justify-center gap-8 min-w-[280px] cursor-pointer snap-always snap-start"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -277,13 +277,13 @@
                         <p
                           class="text-pro-gray transition-opacity duration-300 ease-in-out"
                         >
-                          Klassisk ring
+                          Upplev tidlös elegans
                         </p>
                       </div>
                     </div>
                     <div
                       id="collection-card"
-                      class="py-2 bg-pro-white-purple flex flex-col gap-8 min-w-[280px] cursor-pointer snap-always snap-start"
+                      class="py-2 bg-pro-white-purple flex flex-col justify-center gap-8 min-w-[280px] cursor-pointer snap-always snap-start"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -299,12 +299,13 @@
                         <p
                           class="text-pro-gray transition-opacity duration-300 ease-in-out"
                         >
-                          Klassiska armband.
+                          Upplev tidlös elegans
                         </p>
                       </div>
                     </div>
                     <div
-                      class="p-8 bg-pro-white-purple flex flex-col gap-8 min-w-[280px] cursor-pointer snap-always snap-end"
+                      id="collection-card"
+                      class="py-2 bg-pro-white-purple flex flex-col justify-center gap-8 min-w-[280px] cursor-pointer snap-always snap-end"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -320,7 +321,7 @@
                         <p
                           class="text-pro-gray transition-opacity duration-300 ease-in-out"
                         >
-                          Senaste ringen med de senaste funktionerna.
+                          Upplev tidlös elegans
                         </p>
                       </div>
                     </div>
@@ -466,9 +467,11 @@
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Appen</h2>
               <p class="mb-6">
-                Vid larm initierar armbandet en automatisk ljudinspelning. Denna
-                inspelning kan inte raderas och kan delas med rättsväsendet vid
-                behov, vilket kan ge viktig bevisning.
+                Via våran app så kan du som användare sätta upp nödkontakter,
+                välja vilket typ av larm som ska startas vid ett överfall och
+                starta kopplingen mellan ditt smycke, appen och servern och även
+                tredje parts produkter som stöder NFC. Nödkontakterna blir
+                direkt notifierade när larmet startas.
               </p>
               <button
                 class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
@@ -492,9 +495,11 @@
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Ljudinspelning</h2>
               <p class="mb-6">
-                Vid larm initierar armbandet en automatisk ljudinspelning. Denna
-                inspelning kan inte raderas och kan delas med rättsväsendet vid
-                behov, vilket kan ge viktig bevisning.
+                När larmet går i gång så startas en ljudinspelning som sparas i
+                din mobil och på våran server. Denna ljudinspelning går inte att
+                ta bort även om din mobil skulle bli stulen eller gå sönder så
+                finns ljudinspelningen på våra servar för att kunnas tas ut och
+                användas i ett eventuellt brottsmål.
               </p>
               <button
                 class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
@@ -514,8 +519,10 @@
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">NFC</h2>
               <p class="mb-6">
-                Använd våra produkter för att enkelt betala i matbutiken,
-                identifiera dig eller öppna ditt smarta lås hem eller bilen.
+                Med våran NFC koppling så kan du enkelt lägga in betalkort,
+                koppla t.ex. till smarta lås i din bil eller till din bostad.
+                Betala säkert och enkelt med våra smycken och slipp plocka upp
+                kort eller telefonen!
               </p>
               <button
                 class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
@@ -535,9 +542,11 @@
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Hälsa och sömn</h2>
               <p class="mb-6">
-                Tracka dina steg, få statistik över din puls och se över din
-                sömn med våra produkter som kan hjälpa dig till en hälsosammare
-                vardag.
+                De produkter som sitter nära kroppen som ringar och armband så
+                har du möjlighet att övervaka din sömn, puls och stress nivåer.
+                Detta för att du som användare enkelt ska kunna se mönster i din
+                hälsa och kunna ta tag i en nedåtgående trend innan det är för
+                sent.
               </p>
               <button
                 class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
@@ -618,6 +627,7 @@
         <h1 class="zen-dots text-xl md:text-5xl mb-2">Produkter</h1>
         <div class="flex gap-4 lg:gap-6 overflow-auto snap-x snap-mandatory">
           <div
+            id="product-card-container"
             class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
           >
             <div class="flex flex-col">
@@ -641,10 +651,20 @@
             </div>
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Klassiskt Armband</h2>
-              <p class="mb-6">
-                Vid larm initierar armbandet en automatisk ljudinspelning. Denna
-                inspelning kan inte raderas och kan delas med rättsväsendet vid
-                behov, vilket kan ge viktig bevisning.
+              <p
+                id="product-card-paragraph"
+                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+              >
+                Upplev en sofistikerad fusion av stil och teknik med vårt
+                klassiska armband. Skapad för den moderna individualisten. Mät
+                din hälsa som sömn- och aktivitetsövervakning, och låt armbandet
+                vara din personliga ljudsamling för att fånga viktiga ögonblick.
+                Smidiga betalningar och enkel koppling till vår app ger dig full
+                kontroll över din livsstil. Förenkla din vardag med detta
+                stilrena armband och låt det vara en förlängning av din
+                personliga stil samtidigt som det ger dig möjlighet att ta hand
+                om din hälsa. Tradition möter innovation i varje
+                handledsviftning.
               </p>
               <div class="flex gap-4 items-center mt-auto">
                 <button
@@ -653,7 +673,8 @@
                   Köp nu
                 </button>
                 <div
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                  id="product-card-read-more"
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
                 >
                   Läs mer
                 </div>
@@ -661,6 +682,7 @@
             </div>
           </div>
           <div
+            id="product-card-container"
             class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
           >
             <div class="flex flex-col">
@@ -684,10 +706,18 @@
             </div>
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Tech Armband</h2>
-              <p class="mb-6">
-                Vid larm initierar armbandet en automatisk ljudinspelning. Denna
-                inspelning kan inte raderas och kan delas med rättsväsendet vid
-                behov, vilket kan ge viktig bevisning.
+              <p
+                id="product-card-paragraph"
+                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+              >
+                Upptäck framtidens armband! Vårt IT-inspirerade armband är inte
+                bara en accessoar, det är din personliga assistent på handleden.
+                Med en imponerande skärm som sträcker sig över hela ytan.
+                Armbandet mät din hälsa i realtid, från sömncykler till
+                stegräknare, och optimera din livsstil. NFC-teknologin gör
+                betalningar och överföringar enkla och säkra. Dessutom, fånga
+                ögonblick och idéer med den inbyggda ljudinspelaren – allt på
+                ett och samma armband.
               </p>
               <div class="flex gap-4 items-center mt-auto">
                 <button
@@ -696,7 +726,8 @@
                   Köp nu
                 </button>
                 <div
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                  id="product-card-read-more"
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
                 >
                   Läs mer
                 </div>
@@ -704,6 +735,7 @@
             </div>
           </div>
           <div
+            id="product-card-container"
             class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
           >
             <div class="flex flex-col">
@@ -727,9 +759,20 @@
             </div>
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Klassisk Ring</h2>
-              <p class="mb-6">
-                Använd våra produkter för att enkelt betala i matbutiken,
-                identifiera dig eller öppna ditt smarta lås hem eller bilen.
+              <p
+                id="product-card-paragraph"
+                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+              >
+                Upplev tidlös elegans med vår klassiska ring, där skönhet möter
+                teknik. Vår unika ring tar smyckesvärlden till nya höjder genom
+                att erbjuda inte bara stil utan även smarta funktioner. Mät din
+                hälsa som sömn- och aktivitetsövervakning, och betala smidigt
+                genom att svepa din ring. Dess diskreta förmåga att samla upp
+                ljud gör den även till din personliga anteckningsbok. Koppla
+                samman din ring med vår app för att utforska och förstå din
+                hälsodata på ett helt nytt sätt. Med denna ring blir varje
+                ögonblick stilfullt minnesvärt och varje dag en möjlighet att
+                förena tradition med teknologisk innovation.
               </p>
               <div class="flex gap-4 items-center mt-auto">
                 <button
@@ -738,7 +781,8 @@
                   Köp nu
                 </button>
                 <div
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                  id="product-card-read-more"
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
                 >
                   Läs mer
                 </div>
@@ -746,6 +790,7 @@
             </div>
           </div>
           <div
+            id="product-card-container"
             class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
           >
             <div class="flex flex-col">
@@ -769,9 +814,18 @@
             </div>
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Tech Ring</h2>
-              <p class="mb-6">
-                Använd våra produkter för att enkelt betala i matbutiken,
-                identifiera dig eller öppna ditt smarta lås hem eller bilen.
+              <p
+                id="product-card-paragraph"
+                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+              >
+                IT-inspirerade smarta ring – en revolution i minimalism och
+                teknik! En elegant ring med en futuristisk skärm över hela sin
+                yta, erbjuder den inte bara tid och hälsodata utan även en
+                smidig betalningsfunktion direkt från din hand. Dessutom ger den
+                avancerade ljudinspelningsfunktionen dig möjlighet att säkert
+                dokumentera viktiga ögonblick och möten. Ett smycke som inte
+                bara pryder din hand, utan som också blir din smarta och
+                funktionella följeslagare.
               </p>
               <div class="flex gap-4 items-center mt-auto">
                 <button
@@ -780,7 +834,8 @@
                   Köp nu
                 </button>
                 <div
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                  id="product-card-read-more"
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
                 >
                   Läs mer
                 </div>
@@ -788,6 +843,7 @@
             </div>
           </div>
           <div
+            id="product-card-container"
             class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
           >
             <div class="flex flex-col">
@@ -811,10 +867,16 @@
             </div>
             <div class="px-2 flex flex-col flex-grow">
               <h2 class="text-2xl font-semibold mb-2">Manschetter</h2>
-              <p class="mb-6">
-                Tracka dina steg, få statistik över din puls och se över din
-                sömn med våra produkter som kan hjälpa dig till en hälsosammare
-                vardag.
+              <p
+                id="product-card-paragraph"
+                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+              >
+                Styla upp din look och känn dig trygg samtidigt med våra
+                trendiga manschettknappar! Dessa eleganta accessoarer är inte
+                bara en modeframgång utan också en säkerhetsvinst. Koppla dem
+                till vår app för överfallslarm och dra nytta av NFC-stödet för
+                att göra säkra och stiliga betalningar. Manschettknapparna - för
+                den moderna mannen som vet hur man balanserar stil och säkerhet!
               </p>
               <div class="flex gap-4 items-center mt-auto">
                 <button
@@ -823,7 +885,8 @@
                   Köp nu
                 </button>
                 <div
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300"
+                  id="product-card-read-more"
+                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
                 >
                   Läs mer
                 </div>
