@@ -26,7 +26,7 @@
       >
         <div
           id="aside-inner"
-          class="h-full p-8 bg-pro-white transition duration-300 translate-x-full"
+          class="relative h-full p-8 bg-pro-white transition duration-300 translate-x-full"
         >
           <form
             id="search"
@@ -162,6 +162,26 @@
                   placeholder="name@mail.com"
                 />
               </form>
+            </div>
+          </div>
+          <div
+            id="language-container"
+            class="flex gap-1 absolute bottom-8 left-1/2 -translate-x-1/2 bg-pro-white text-xl font-medium leading-[30px] select-none"
+          >
+            <div id="language-btn" class="cursor-pointer group">
+              <span>En</span>
+              <div
+                id="language-underline"
+                class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              ></div>
+            </div>
+            <div>/</div>
+            <div id="language-btn" class="cursor-pointer group">
+              <span>Sv</span>
+              <div
+                id="language-underline"
+                class="h-[2px] w-full group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              ></div>
             </div>
           </div>
         </div>
@@ -406,7 +426,26 @@
           </div>
         </div>
         <div class="hidden md:flex gap-4 items-center">
-          <span class="material-symbols-outlined"> language </span>
+          <div
+            id="language-container"
+            class="flex gap-1 text-xl font-medium leading-[30px] select-none"
+          >
+            <div id="language-btn" class="cursor-pointer group">
+              <span>En</span>
+              <div
+                id="language-underline"
+                class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              ></div>
+            </div>
+            <div>/</div>
+            <div id="language-btn" class="cursor-pointer group">
+              <span>Sv</span>
+              <div
+                id="language-underline"
+                class="h-[2px] w-full group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              ></div>
+            </div>
+          </div>
           <div
             id="search-desktop-btn"
             class="hidden md:flex gap-2 items-center text-xl text-pro-black cursor-pointer select-none transition-all duration-300"

@@ -39,6 +39,8 @@ const productCardContainer = document.querySelectorAll(
   "#product-card-container"
 );
 
+const languageContainers = document.querySelectorAll("#language-container");
+
 // Toggles desktop dropdown collection links.
 const togglePrevCollection = (btn) => {
   if (!btn.classList.contains("font-semibold")) {
@@ -389,5 +391,23 @@ productCardContainer.forEach((productCard) => {
     } else {
       paragraph.style.height = `144px`;
     }
+  });
+});
+
+languageContainers.forEach((container) => {
+  const languageBtns = container.querySelectorAll("#language-btn");
+
+  languageBtns.forEach((language) => {
+    language.addEventListener("click", () => {
+      const underlines = document.querySelectorAll("#language-underline");
+
+      underlines.forEach((underline) => {
+        if (underline.classList.contains("w-full")) {
+          underline.classList.replace("w-full", "w-0");
+        } else {
+          underline.classList.replace("w-0", "w-full");
+        }
+      });
+    });
   });
 });
