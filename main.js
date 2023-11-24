@@ -41,6 +41,10 @@ const productCardContainer = document.querySelectorAll(
 
 const languageContainers = document.querySelectorAll("#language-container");
 
+const toComeSection = document.querySelector("#to-come-section");
+const rotationIndicator = document.querySelector("#rotation-indicator");
+let hasIndicated = false;
+
 // Toggles desktop dropdown collection links.
 const togglePrevCollection = (btn) => {
   if (!btn.classList.contains("font-semibold")) {
@@ -49,6 +53,31 @@ const togglePrevCollection = (btn) => {
     btn.classList.remove("font-semibold", "text-pro-dark-purple");
   }
 };
+
+const handleIntersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      if (hasIndicated) return;
+      hasIndicated = true;
+      rotationIndicator.classList.replace("hidden", "flex");
+      rotationIndicator.classList.toggle("fade-in-out");
+      setTimeout(() => {
+        rotationIndicator.classList.replace("flex", "hidden");
+        rotationIndicator.classList.toggle("fade-in-out");
+      }, 1200);
+    }
+  });
+};
+
+const options = {
+  root: null, // window
+  rootMargin: "0px",
+  threshold: 1,
+};
+
+const observer = new IntersectionObserver(handleIntersection, options);
+
+observer.observe(toComeSection);
 
 const toggleCollectionCards = (collection) => {
   const dataToInsert = collectionData[collection];
