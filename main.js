@@ -179,6 +179,11 @@ const toggleMenuBar = () => {
   }
 };
 
+const emailRegexpTest = (email) => {
+  const emailRegxp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailRegxp.test(email);
+};
+
 menuBtn.addEventListener("click", toggleMenuBar);
 window.addEventListener("resize", () => {
   // If window is resized close side menu/dropdown
@@ -210,9 +215,8 @@ forms.forEach((form) => {
 
     const email = form.querySelector("#email");
     const emailIcon = form.querySelector("#emailIcon");
-    const emailRegxp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    if (emailRegxp.test(email.value)) {
+    if (emailRegexpTest(email.value)) {
       email.value = "";
       emailIcon.classList.add("text-green-500");
       setTimeout(() => {
@@ -320,6 +324,7 @@ scrollToProducts.addEventListener("click", () =>
 
 toggleEnterEmailToCome.addEventListener("click", () => {
   const form = toggleEnterEmailToCome.querySelector("#form");
+  const email = toggleEnterEmailToCome.querySelector("#email");
   const submitBtn = document.querySelector("#toggle-enter-email-submit");
 
   form.addEventListener("click", (ev) => {
@@ -335,6 +340,7 @@ toggleEnterEmailToCome.addEventListener("click", () => {
   }, 10);
 
   submitBtn.addEventListener("click", () => {
+    if (!emailRegexpTest(email.value)) return;
     form.classList.replace("opacity-100", "opacity-0");
     submitBtn.classList.replace("opacity-100", "opacity-0");
 
