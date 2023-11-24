@@ -92,9 +92,8 @@ const toggleCollectionCards = (collection) => {
     titleText.classList.add("opacity-0");
     descriptionText.classList.add("opacity-0");
 
-    setTimeout(async () => {
-      const newImage = await import(img);
-      image.src = newImage.default;
+    setTimeout(() => {
+      image.src = img;
       titleText.textContent = title;
       descriptionText.textContent = description;
 
@@ -361,14 +360,6 @@ selectColorContainers.forEach((container, prodIndex) => {
         ],
         ["/Manch_Gold.png", "/Manch_Silver.png", "/Manch_Dark.png"],
       ];
-
-      const productImage = productImages[prodIndex];
-
-      const imagePath = productsData[prodIndex][colorIndex];
-      const imgModule = await import(imagePath);
-      const imgSrc = imgModule.default;
-
-      productImage.src = imgSrc;
 
       productImages[prodIndex].src = productsData[prodIndex][colorIndex];
     });
