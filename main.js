@@ -174,8 +174,8 @@ const toggleDesktopDropdown = (index) => {
       // remove previous collection class.
       togglePrevCollection(collectionNavBtns[collectionType].children[0]);
 
-      toggleCollectionCards(collectionType);
-      toggleCollectionCards(0);
+      toggleCollectionCards(collectionType); // toggle class from selected collection
+      toggleCollectionCards(0); // reset to first collection
       collectionType = 0;
       collectionNavBtns[collectionType].children[0].classList.add(
         "font-semibold",
@@ -294,12 +294,13 @@ searchForms.forEach((searchForm) => {
   });
 });
 
-scrollToTop.addEventListener("click", (ev) => {
+scrollToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 navLgLinks.forEach((link, index) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (ev) => {
+    ev.preventDefault(); // prevents window scrolling to top
     if (prevDropdownIndex !== index && prevDropdownIndex !== null) {
       toggleDesktopDropdown(prevDropdownIndex);
     }
