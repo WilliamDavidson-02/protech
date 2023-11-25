@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link rel="shortcut icon" href="/function-app.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title>Protech</title>
   </head>
@@ -187,7 +188,7 @@
         </div>
       </aside>
       <nav
-        class="flex justify-between items-center max-w-[1184px] mx-auto px-6 py-4 md:py-8 bg-pro-white"
+        class="flex justify-between items-center max-w-[1184px] mx-auto px-6 py-4 lg:py-8 bg-pro-white"
       >
         <img class="max-w-[180px]" src="/logga-lggande-2.svg" alt="" />
         <!-- Mobile -->
@@ -470,11 +471,17 @@
       <section
         class="h-screen flex md:justify-end justify-center md:items-center items-end px-6"
       >
-        <img
-          class="-z-50 absolute top-0 left-0 h-screen object-cover object-left-top w-screen max-w-full"
-          src="/Hero.png"
-          alt=""
-        />
+        <div
+          class="-z-50 absolute top-[60px] lg:top-[92px] left-0 h-[calc(100vh-60px)] lg:h-[calc(100vh-92px)] w-screen max-w-full"
+        >
+          <video
+            class="h-full w-full object-cover object-left-top"
+            src="/hero.mp4"
+            autoplay
+            loop
+            muted
+          ></video>
+        </div>
         <div class="text-pro-white py-4 flex flex-col gap-8 max-w-[500px]">
           <div class="py-2 flex flex-col gap-4 md:text-pro-black">
             <h1 class="zen-dots text-xl m-0 md:text-6xl">Keep cool</h1>
