@@ -43,7 +43,8 @@ const languageContainers = document.querySelectorAll("#language-container");
 
 const toComeSection = document.querySelector("#to-come-section");
 const rotationIndicator = document.querySelector("#rotation-indicator");
-let hasIndicated = false;
+
+const productSection = document.querySelector("#products-section");
 
 // Toggles desktop dropdown collection links.
 const togglePrevCollection = (btn) => {
@@ -54,17 +55,30 @@ const togglePrevCollection = (btn) => {
   }
 };
 
-const handleIntersection = (entries, observer) => {
+const handleKeyChainIntersection = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      if (hasIndicated) return;
-      hasIndicated = true;
       rotationIndicator.classList.replace("hidden", "flex");
       rotationIndicator.classList.toggle("fade-in-out");
       setTimeout(() => {
         rotationIndicator.classList.replace("flex", "hidden");
         rotationIndicator.classList.toggle("fade-in-out");
       }, 1200);
+
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const handleProductCardsIntersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      productSection.scroll({ left: 200, behavior: "smooth" });
+      setTimeout(() => {
+        productSection.scroll({ left: 0, behavior: "smooth" });
+      }, 700);
+
+      observer.unobserve(entry.target);
     }
   });
 };
@@ -75,9 +89,17 @@ const options = {
   threshold: 1,
 };
 
-const observer = new IntersectionObserver(handleIntersection, options);
+const keyChainObserver = new IntersectionObserver(
+  (entries) => handleKeyChainIntersection(entries, keyChainObserver),
+  options
+);
+const productCardsObserver = new IntersectionObserver(
+  (entries) => handleProductCardsIntersection(entries, productCardsObserver),
+  options
+);
 
-observer.observe(toComeSection);
+keyChainObserver.observe(toComeSection);
+productCardsObserver.observe(productSection);
 
 const toggleCollectionCards = (collection) => {
   const dataToInsert = collectionData[collection];
@@ -367,9 +389,7 @@ selectColorContainers.forEach((container, prodIndex) => {
 });
 
 scrollToProducts.addEventListener("click", () =>
-  document
-    .querySelector("#products-section")
-    .scrollIntoView({ behavior: "smooth", block: "center" })
+  productSection.scrollIntoView({ behavior: "smooth", block: "center" })
 );
 
 toggleEnterEmailToCome.addEventListener("click", () => {
