@@ -243,11 +243,11 @@ const emailRegexpTest = (email) => {
 menuBtn.addEventListener("click", toggleMenuBar);
 window.addEventListener("resize", () => {
   // If window is resized close side menu/dropdown
-  if ((window.innerWidth > 768) & menuLines[1].classList.contains("w-0")) {
+  if ((window.innerWidth > 1024) & menuLines[1].classList.contains("w-0")) {
     toggleMenuBar();
   }
   if (
-    (window.innerWidth <= 768) &
+    (window.innerWidth <= 1024) &
     underlines[prevDropdownIndex]?.classList.contains("w-full")
   ) {
     toggleDesktopDropdown(prevDropdownIndex);
