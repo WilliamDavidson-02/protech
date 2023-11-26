@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,18 +20,18 @@
     <title>Protech</title>
   </head>
   <body class="bg-pro-white">
-    <header class="fixed top-0 w-full bg-pro-white z-50">
+    <header class="fixed top-0 z-50 w-full bg-pro-white">
       <aside
         id="aside-container"
-        class="hidden w-screen h-[calc(100vh-57px)] absolute left-0 top-full overflow-hidden"
+        class="absolute left-0 top-full hidden h-[calc(100vh-57px)] w-screen overflow-hidden"
       >
         <div
           id="aside-inner"
-          class="relative h-full p-8 bg-pro-white transition duration-300 translate-x-full"
+          class="relative h-full translate-x-full bg-pro-white p-8 transition duration-300"
         >
           <form
             id="search"
-            class="bg-white flex gap-[10px] itmes-center p-2 rounded-full mb-2"
+            class="itmes-center mb-2 flex gap-[10px] rounded-full bg-white p-2"
           >
             <span class="material-symbols-outlined"> search </span>
             <input
@@ -44,26 +44,26 @@
           </form>
           <div
             id="dropdown-btn"
-            class="border border-x-transparent border-y-pro-black py-2 select-none"
+            class="select-none border border-x-transparent border-y-pro-black py-2"
           >
-            <div class="flex justify-between items-center cursor-pointer">
+            <div class="flex cursor-pointer items-center justify-between">
               <div>
-                <h1 class="m-0 text-xl zen-dots">Våra smycken</h1>
+                <h1 class="zen-dots m-0 text-xl">Våra smycken</h1>
                 <p class="m-0 text-pro-gray">Se våra kollektioner</p>
               </div>
               <span
                 id="expand-icon"
-                class="material-symbols-outlined text-5xl cursor-pointer"
+                class="material-symbols-outlined cursor-pointer text-5xl"
               >
                 expand_more
               </span>
             </div>
             <div
-              class="flex flex-col gap-4 h-0 overflow-hidden transition-all ease-out duration-300"
+              class="flex h-0 flex-col gap-4 overflow-hidden transition-all duration-300 ease-out"
             >
-              <div class="flex justify-between items-center">
+              <div class="flex items-center justify-between">
                 <div>
-                  <h1 class="font-medium text-lg">Classic</h1>
+                  <h1 class="text-lg font-medium">Classic</h1>
                   <p class="text-sm text-pro-gray">Våra mest klassiska snitt</p>
                 </div>
                 <img
@@ -72,16 +72,16 @@
                   alt=""
                 />
               </div>
-              <div class="flex justify-between items-center">
+              <div class="flex items-center justify-between">
                 <div>
-                  <h1 class="font-medium text-lg">Tech</h1>
+                  <h1 class="text-lg font-medium">Tech</h1>
                   <p class="text-sm text-pro-gray">Senaste designen</p>
                 </div>
                 <img class="max-h-[60px]" src="/Preview_Tech_Gold.png" alt="" />
               </div>
-              <div class="flex justify-between items-center">
+              <div class="flex items-center justify-between">
                 <div>
-                  <h1 class="font-medium text-lg">Se hela kollektionen</h1>
+                  <h1 class="text-lg font-medium">Se hela kollektionen</h1>
                   <p class="text-sm text-pro-gray">Se våra kollektioner</p>
                 </div>
               </div>
@@ -89,68 +89,68 @@
           </div>
           <div
             id="dropdown-btn"
-            class="border border-x-transparent border-b-pro-black py-2 select-none"
+            class="select-none border border-x-transparent border-b-pro-black py-2"
           >
-            <div class="flex justify-between items-center cursor-pointer">
+            <div class="flex cursor-pointer items-center justify-between">
               <div>
-                <h1 class="m-0 text-xl zen-dots">ProTect app</h1>
+                <h1 class="zen-dots m-0 text-xl">ProTect app</h1>
                 <p class="m-0 text-pro-gray">Ladda ner vår app</p>
               </div>
               <span
                 id="expand-icon"
-                class="material-symbols-outlined text-5xl cursor-pointer"
+                class="material-symbols-outlined cursor-pointer text-5xl"
               >
                 expand_more
               </span>
             </div>
             <div
-              class="flex flex-col gap-4 h-0 overflow-hidden transition-all ease-out duration-300"
+              class="flex h-0 flex-col gap-4 overflow-hidden transition-all duration-300 ease-out"
             >
-              <a href="#" class="underline text-pro-light-purple"
+              <a href="#" class="text-pro-light-purple underline"
                 >Ladda ner från app store / iOS</a
               >
-              <a href="#" class="underline text-pro-light-purple"
+              <a href="#" class="text-pro-light-purple underline"
                 >Ladda ner från app store / iOS</a
               >
             </div>
           </div>
           <div
-            class="border border-x-transparent border-b-pro-black py-2 select-none"
+            class="select-none border border-x-transparent border-b-pro-black py-2"
           >
-            <div class="flex justify-between items-center cursor-pointer">
+            <div class="flex cursor-pointer items-center justify-between">
               <div>
-                <h1 class="m-0 text-xl zen-dots">Om oss</h1>
+                <h1 class="zen-dots m-0 text-xl">Om oss</h1>
                 <p class="m-0 text-pro-gray">Läs mer om oss</p>
               </div>
-              <span class="material-symbols-outlined text-5xl cursor-pointer">
+              <span class="material-symbols-outlined cursor-pointer text-5xl">
                 chevron_right
               </span>
             </div>
           </div>
           <div
             id="dropdown-btn"
-            class="border border-x-transparent border-y-pro-black py-2 select-none mt-24"
+            class="mt-24 select-none border border-x-transparent border-y-pro-black py-2"
           >
-            <div class="flex justify-between items-center cursor-pointer">
+            <div class="flex cursor-pointer items-center justify-between">
               <div>
-                <h1 class="m-0 text-xl zen-dots">Nyhetsbrev</h1>
+                <h1 class="zen-dots m-0 text-xl">Nyhetsbrev</h1>
                 <p class="m-0 text-pro-gray">
                   Gå med och få nyheter till din mail
                 </p>
               </div>
               <span
                 id="expand-icon"
-                class="material-symbols-outlined text-5xl cursor-pointer"
+                class="material-symbols-outlined cursor-pointer text-5xl"
               >
                 expand_more
               </span>
             </div>
             <div
-              class="h-0 overflow-hidden transition-all ease-out duration-300"
+              class="h-0 overflow-hidden transition-all duration-300 ease-out"
             >
               <form
                 id="form"
-                class="bg-white flex gap-[10px] items-center p-2 rounded-full"
+                class="flex items-center gap-[10px] rounded-full bg-white p-2"
               >
                 <span id="emailIcon" class="material-symbols-outlined">
                   mail
@@ -167,110 +167,110 @@
           </div>
           <div
             id="language-container"
-            class="flex gap-1 absolute bottom-8 left-1/2 -translate-x-1/2 bg-pro-white text-xl font-medium leading-[30px] select-none"
+            class="absolute bottom-8 left-1/2 flex -translate-x-1/2 select-none gap-1 bg-pro-white text-xl font-medium leading-[30px]"
           >
-            <div id="language-btn" class="cursor-pointer group">
+            <div id="language-btn" class="group cursor-pointer">
               <span>En</span>
               <div
                 id="language-underline"
-                class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+                class="h-[2px] w-0 bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
               ></div>
             </div>
             <div>/</div>
-            <div id="language-btn" class="cursor-pointer group">
+            <div id="language-btn" class="group cursor-pointer">
               <span>Sv</span>
               <div
                 id="language-underline"
-                class="h-[2px] w-full group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+                class="h-[2px] w-full bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
               ></div>
             </div>
           </div>
         </div>
       </aside>
       <nav
-        class="flex justify-between items-center max-w-[1184px] mx-auto px-6 py-4 lg:py-8 bg-pro-white"
+        class="mx-auto flex max-w-[1184px] items-center justify-between bg-pro-white px-6 py-4 lg:py-8"
       >
         <img class="max-w-[180px]" src="/logga-lggande-2.svg" alt="" />
         <!-- Mobile -->
         <div
           id="menu-btn"
-          class="lg:hidden flex flex-col gap-[5px] cursor-pointer"
+          class="flex cursor-pointer flex-col gap-[5px] lg:hidden"
         >
           <div
             id="menu-line"
-            class="transform-right-center w-8 h-[3px] bg-pro-light-purple transition duration-200"
+            class="transform-right-center h-[3px] w-8 bg-pro-light-purple transition duration-200"
           ></div>
           <div
             id="menu-line"
-            class="w-8 h-[3px] bg-pro-light-purple transition-all ease-in-out duration-200"
+            class="h-[3px] w-8 bg-pro-light-purple transition-all duration-200 ease-in-out"
           ></div>
           <div
             id="menu-line"
-            class="transform-right-center w-8 h-[3px] bg-pro-light-purple transition duration-200"
+            class="transform-right-center h-[3px] w-8 bg-pro-light-purple transition duration-200"
           ></div>
         </div>
         <!-- Desktop -->
-        <div class="hidden lg:flex gap-6 text-xl text-pro-black select-none">
+        <div class="hidden select-none gap-6 text-xl text-pro-black lg:flex">
           <div id="nav-lg-link" class="group">
             <a class="font-semibold leading-[30px]" href="#">Våra smycken</a>
             <div
               id="underline"
-              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
             ></div>
             <div
               id="nav-lg-dropdown"
-              class="hidden h-[calc(100vh-92px)] left-0 top-[92px] w-full -z-20"
+              class="left-0 top-[92px] -z-20 hidden h-[calc(100vh-92px)] w-full"
             >
               <div
-                class="py-16 px-6 -translate-y-full transition-all duration-300 bg-pro-white w-full"
+                class="w-full -translate-y-full bg-pro-white px-6 py-16 transition-all duration-300"
               >
-                <div class="max-w-[1184px] w-full mx-auto flex gap-[21px]">
+                <div class="mx-auto flex w-full max-w-[1184px] gap-[21px]">
                   <!-- Menu list -->
                   <div
-                    class="flex flex-col gap-[40px] border border-transparent border-r-pro-black pr-8 min-w-[280px]"
+                    class="flex min-w-[280px] flex-col gap-[40px] border border-transparent border-r-pro-black pr-8"
                   >
-                    <h1 class="text-2xl zen-dots">Kollektioner</h1>
+                    <h1 class="zen-dots text-2xl">Kollektioner</h1>
                     <div
                       id="collection-nav-btn"
-                      class="cursor-pointer group/collection-link"
+                      class="group/collection-link cursor-pointer"
                     >
                       <h2
-                        class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300 font-semibold text-pro-dark-purple"
+                        class="text-[28px] font-semibold leading-[34px] text-pro-dark-purple transition-colors duration-300 group-hover/collection-link:text-pro-dark-purple"
                       >
                         Klassiska
                       </h2>
-                      <p class="text-pro-gray leading-[22px]">
+                      <p class="leading-[22px] text-pro-gray">
                         Vår klassiska kollektion
                       </p>
                     </div>
                     <div
                       id="collection-nav-btn"
-                      class="cursor-pointer group/collection-link"
+                      class="group/collection-link cursor-pointer"
                     >
                       <h2
-                        class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300"
+                        class="text-[28px] leading-[34px] transition-colors duration-300 group-hover/collection-link:text-pro-dark-purple"
                       >
                         Tech
                       </h2>
-                      <p class="text-pro-gray leading-[22px]">
+                      <p class="leading-[22px] text-pro-gray">
                         High-tech kollektionen
                       </p>
                     </div>
                     <div
-                      class="flex justify-between items-center cursor-pointer group/collection-link"
+                      class="group/collection-link flex cursor-pointer items-center justify-between"
                     >
                       <div>
                         <h2
-                          class="text-[28px] leading-[34px] group-hover/collection-link:text-pro-dark-purple transition-colors duration-300"
+                          class="text-[28px] leading-[34px] transition-colors duration-300 group-hover/collection-link:text-pro-dark-purple"
                         >
                           Visa alla
                         </h2>
-                        <p class="text-pro-gray leading-[22px]">
+                        <p class="leading-[22px] text-pro-gray">
                           Se alla produkter
                         </p>
                       </div>
                       <span
-                        class="material-symbols-outlined text-pro-gold text-3xl"
+                        class="material-symbols-outlined text-3xl text-pro-gold"
                       >
                         chevron_right
                       </span>
@@ -278,11 +278,11 @@
                   </div>
                   <!-- Collection cards -->
                   <div
-                    class="flex gap-[21px] overflow-x-auto snap-x snap-mandatory"
+                    class="flex snap-x snap-mandatory gap-[21px] overflow-x-auto"
                   >
                     <div
                       id="collection-card"
-                      class="py-2 bg-pro-white-purple flex flex-col justify-center gap-8 min-w-[280px] cursor-pointer snap-always snap-start"
+                      class="flex min-w-[280px] cursor-pointer snap-start snap-always flex-col justify-center gap-8 bg-pro-white-purple py-2"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -291,7 +291,7 @@
                       />
                       <div class="text-center">
                         <h2
-                          class="text-[28px] font-semibold leading-[34px] break-normal transition-opacity duration-300 ease-in-out"
+                          class="break-normal text-[28px] font-semibold leading-[34px] transition-opacity duration-300 ease-in-out"
                         >
                           Klassisk Ring
                         </h2>
@@ -304,7 +304,7 @@
                     </div>
                     <div
                       id="collection-card"
-                      class="py-2 bg-pro-white-purple flex flex-col justify-center gap-8 min-w-[280px] cursor-pointer snap-always snap-start"
+                      class="flex min-w-[280px] cursor-pointer snap-start snap-always flex-col justify-center gap-8 bg-pro-white-purple py-2"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -313,7 +313,7 @@
                       />
                       <div class="text-center">
                         <h2
-                          class="text-[28px] font-semibold leading-[34px] break-normal transition-opacity duration-300 ease-in-out"
+                          class="break-normal text-[28px] font-semibold leading-[34px] transition-opacity duration-300 ease-in-out"
                         >
                           Klassiska Armband
                         </h2>
@@ -326,7 +326,7 @@
                     </div>
                     <div
                       id="collection-card"
-                      class="py-2 bg-pro-white-purple flex flex-col justify-center gap-8 min-w-[280px] cursor-pointer snap-always snap-end"
+                      class="flex min-w-[280px] cursor-pointer snap-end snap-always flex-col justify-center gap-8 bg-pro-white-purple py-2"
                     >
                       <img
                         class="max-h-[150px] object-contain transition-opacity duration-300 ease-in-out"
@@ -335,7 +335,7 @@
                       />
                       <div class="text-center">
                         <h2
-                          class="text-[28px] font-semibold leading-[34px] break-normal transition-opacity duration-300 ease-in-out"
+                          class="break-normal text-[28px] font-semibold leading-[34px] transition-opacity duration-300 ease-in-out"
                         >
                           Se alla
                         </h2>
@@ -354,31 +354,31 @@
           <div class="group">
             <a class="font-semibold leading-[30px]" href="#">Appen</a>
             <div
-              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
             ></div>
           </div>
           <div class="group">
             <a class="font-semibold leading-[30px]" href="#">Om oss</a>
             <div
-              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
             ></div>
           </div>
           <div id="nav-lg-link" class="group">
             <a class="font-semibold leading-[30px]" href="#">Nyhetsbrev</a>
             <div
               id="underline"
-              class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+              class="h-[2px] w-0 bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
             ></div>
             <div
               id="nav-lg-dropdown"
-              class="hidden h-screen left-0 top-[92px] w-full -z-20"
+              class="left-0 top-[92px] -z-20 hidden h-screen w-full"
             >
               <div
-                class="py-16 px-6 -translate-y-full transition-all duration-300 bg-pro-white w-full"
+                class="w-full -translate-y-full bg-pro-white px-6 py-16 transition-all duration-300"
               >
-                <div class="max-w-[1184px] w-full mx-auto flex gap-5">
+                <div class="mx-auto flex w-full max-w-[1184px] gap-5">
                   <div class="w-1/2">
-                    <h1 class="zen-dots text-3xl leading-[39px] mb-8">
+                    <h1 class="zen-dots mb-8 text-3xl leading-[39px]">
                       Fördelar med att signa upp för nyhetsbrev
                     </h1>
                     <p class="text-2xl leading-[33px]">
@@ -390,11 +390,11 @@
                     </p>
                   </div>
                   <div
-                    class="bg-pro-white-purple w-1/2 p-16 flex flex-col gap-4 flex-grow justify-center"
+                    class="flex w-1/2 flex-grow flex-col justify-center gap-4 bg-pro-white-purple p-16"
                   >
                     <form
                       id="form"
-                      class="bg-white flex gap-[10px] items-centre p-2 rounded-full w-full"
+                      class="items-centre flex w-full gap-[10px] rounded-full bg-white p-2"
                     >
                       <span
                         id="emailIcon"
@@ -411,7 +411,7 @@
                       />
                       <button type="submit">
                         <span
-                          class="material-symbols-outlined flex items-center cursor-pointer"
+                          class="material-symbols-outlined flex cursor-pointer items-center"
                         >
                           arrow_forward
                         </span>
@@ -426,35 +426,35 @@
             </div>
           </div>
         </div>
-        <div class="hidden lg:flex gap-4 items-center">
+        <div class="hidden items-center gap-4 lg:flex">
           <div
             id="language-container"
-            class="flex gap-1 text-xl font-medium leading-[30px] select-none"
+            class="flex select-none gap-1 text-xl font-medium leading-[30px]"
           >
-            <div id="language-btn" class="cursor-pointer group">
+            <div id="language-btn" class="group cursor-pointer">
               <span>En</span>
               <div
                 id="language-underline"
-                class="h-[2px] w-0 group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+                class="h-[2px] w-0 bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
               ></div>
             </div>
             <div>/</div>
-            <div id="language-btn" class="cursor-pointer group">
+            <div id="language-btn" class="group cursor-pointer">
               <span>Sv</span>
               <div
                 id="language-underline"
-                class="h-[2px] w-full group-hover:w-full bg-pro-dark-purple transition-all ease-in-out duration-300"
+                class="h-[2px] w-full bg-pro-dark-purple transition-all duration-300 ease-in-out group-hover:w-full"
               ></div>
             </div>
           </div>
           <div
             id="search-desktop-btn"
-            class="hidden md:flex gap-2 items-center text-xl text-pro-black cursor-pointer select-none transition-all duration-300"
+            class="hidden cursor-pointer select-none items-center gap-2 text-xl text-pro-black transition-all duration-300 md:flex"
           >
             <span class="material-symbols-outlined"> search </span>
             <form id="search">
               <input
-                class="w-10 bg-transparent placeholder:text-pro-black transition-all cursor-pointer duration-300"
+                class="w-10 cursor-pointer bg-transparent transition-all duration-300 placeholder:text-pro-black"
                 id="search-input"
                 placeholder="Sök"
                 type="text"
@@ -466,13 +466,13 @@
         </div>
       </nav>
     </header>
-    <main class="max-w-[1440px] w-full mx-auto overflow-hidden">
+    <main class="mx-auto w-full max-w-[1440px] overflow-hidden">
       <!-- Hero Section -->
       <section
-        class="h-screen flex md:justify-end justify-center md:items-center items-end px-6"
+        class="flex h-screen items-end justify-center px-6 md:items-center md:justify-end"
       >
         <div
-          class="-z-50 absolute top-[60px] lg:top-[92px] left-0 h-[calc(100vh-60px)] lg:h-[calc(100vh-92px)] w-screen max-w-full"
+          class="absolute left-0 top-[60px] -z-50 h-[calc(100vh-60px)] w-screen max-w-full lg:top-[92px] lg:h-[calc(100vh-92px)]"
         >
           <video
             class="h-full w-full object-cover object-left-top"
@@ -482,9 +482,9 @@
             muted
           ></video>
         </div>
-        <div class="text-pro-white py-4 flex flex-col gap-8 max-w-[500px]">
-          <div class="py-2 flex flex-col gap-4 md:text-pro-black">
-            <h1 class="zen-dots text-xl m-0 md:text-6xl">Keep cool</h1>
+        <div class="flex max-w-[500px] flex-col gap-8 py-4 text-pro-white">
+          <div class="flex flex-col gap-4 py-2 md:text-pro-black">
+            <h1 class="zen-dots m-0 text-xl md:text-6xl">Keep cool</h1>
             <p class="m-0 md:text-2xl">
               Nu kan du äntligen gå runt tryggt och lugnt på stan. Men vår nya
               produkt kan både du och dina anhöriga slappna av.
@@ -492,28 +492,28 @@
           </div>
           <button
             id="scroll-to-products"
-            class="px-4 md:w-fit md:px-16 py-2 md:py-[6px] text-xl leading-7 bg-pro-light-purple hover:bg-pro-gold transition-colors duration-300 hover:text-pro-black rounded-full cursor-pointer shadow-proBtn"
+            class="cursor-pointer rounded-full bg-pro-light-purple px-4 py-2 text-xl leading-7 shadow-proBtn transition-colors duration-300 hover:bg-pro-gold hover:text-pro-black md:w-fit md:px-16 md:py-[6px]"
           >
             Läs mer om produkterna
           </button>
         </div>
       </section>
       <!-- Functions section -->
-      <section class="my-16 md:my-32 px-6 mx-auto max-w-[1140px]">
-        <h1 class="zen-dots text-xl md:text-5xl mb-2">Funktioner</h1>
+      <section class="mx-auto my-16 max-w-[1140px] px-6 md:my-32">
+        <h1 class="zen-dots mb-2 text-xl md:text-5xl">Funktioner</h1>
         <div
-          class="flex gap-4 lg:gap-6 overflow-auto snap-x snap-mandatory overscroll-x-contain scrollbar-none scroll-smooth"
+          class="flex snap-x snap-mandatory gap-4 overflow-auto overscroll-x-contain scroll-smooth scrollbar-none lg:gap-6"
         >
           <div
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div
-              class="w-full h-[196px] flex justify-center items-center bg-pro-black"
+              class="flex h-[196px] w-full items-center justify-center bg-pro-black"
             >
-              <img class="w-full h-[114px]" src="/function-app.svg" alt="" />
+              <img class="h-[114px] w-full" src="/function-app.svg" alt="" />
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Appen</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Appen</h2>
               <p class="mb-6">
                 Via våran app så kan du som användare sätta upp nödkontakter,
                 välja vilket typ av larm som ska startas vid ett överfall och
@@ -522,26 +522,26 @@
                 direkt notifierade när larmet startas.
               </p>
               <button
-                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+                class="transition-color mt-auto w-fit rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
               >
                 Läs mer
               </button>
             </div>
           </div>
           <div
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div
-              class="w-full h-[196px] flex justify-center items-center bg-pro-black"
+              class="flex h-[196px] w-full items-center justify-center bg-pro-black"
             >
               <img
-                class="w-full h-[100px]"
+                class="h-[100px] w-full"
                 src="/function-sound-rec.svg"
                 alt=""
               />
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Ljudinspelning</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Ljudinspelning</h2>
               <p class="mb-6">
                 När larmet går i gång så startas en ljudinspelning som sparas i
                 din mobil och på våran server. Denna ljudinspelning går inte att
@@ -550,22 +550,22 @@
                 användas i ett eventuellt brottsmål.
               </p>
               <button
-                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+                class="transition-color mt-auto w-fit rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
               >
                 Läs mer
               </button>
             </div>
           </div>
           <div
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div
-              class="w-full h-[196px] flex justify-center items-center bg-pro-black"
+              class="flex h-[196px] w-full items-center justify-center bg-pro-black"
             >
-              <img class="w-full h-[100px]" src="/function-nfc.svg" alt="" />
+              <img class="h-[100px] w-full" src="/function-nfc.svg" alt="" />
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">NFC</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">NFC</h2>
               <p class="mb-6">
                 Med våran NFC koppling så kan du enkelt lägga in betalkort,
                 koppla t.ex. till smarta lås i din bil eller till din bostad.
@@ -573,22 +573,22 @@
                 kort eller telefonen!
               </p>
               <button
-                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+                class="transition-color mt-auto w-fit rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
               >
                 Läs mer
               </button>
             </div>
           </div>
           <div
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div
-              class="w-full h-[196px] flex justify-center items-end bg-pro-black"
+              class="flex h-[196px] w-full items-end justify-center bg-pro-black"
             >
               <img class="w-full" src="/function-healt.svg" alt="" />
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Hälsa och sömn</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Hälsa och sömn</h2>
               <p class="mb-6">
                 De produkter som sitter nära kroppen som ringar och armband så
                 har du möjlighet att övervaka din sömn, puls och stress nivåer.
@@ -597,7 +597,7 @@
                 sent.
               </p>
               <button
-                class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px] mt-auto w-fit"
+                class="transition-color mt-auto w-fit rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
               >
                 Läs mer
               </button>
@@ -608,11 +608,11 @@
       <!-- To come section -->
       <section id="to-come-section">
         <div
-          class="py-8 px-6 md:py-16 md:px-8 bg-pro-light-gold w-full max-w-[850px] mx-auto"
+          class="mx-auto w-full max-w-[850px] bg-pro-light-gold px-6 py-8 md:px-8 md:py-16"
         >
-          <div class="flex flex-col-reverse md:flex-row w-full">
+          <div class="flex w-full flex-col-reverse md:flex-row">
             <div>
-              <h2 class="text-lg md:text-5xl font-semibold zen-dots md:mb-6">
+              <h2 class="zen-dots text-lg font-semibold md:mb-6 md:text-5xl">
                 Kommer snart
               </h2>
               <p class="md:text-xl">
@@ -622,15 +622,15 @@
                 nyheterna genom att anmäla dig nedan. Låt oss göra vardagen lite
                 mer färgglad tillsammans!
               </p>
-              <div class="flex justify-center md:justify-start mt-6">
+              <div class="mt-6 flex justify-center md:justify-start">
                 <button
                   id="toggle-enter-email-to-come"
-                  class="relative py-2 px-4 md:px-8 bg-pro-light-purple hover:bg-pro-gold transition-colors duration-300 text-pro-white rounded-full md:text-xl shadow-proBtn w-full max-w-[300px]"
+                  class="relative w-full max-w-[300px] rounded-full bg-pro-light-purple px-4 py-2 text-pro-white shadow-proBtn transition-colors duration-300 hover:bg-pro-gold md:px-8 md:text-xl"
                 >
                   <span>Gå med i Nyhetsbrevet</span>
                   <form
                     id="form"
-                    class="absolute opacity-0 transition-opacity duration-300 top-0 left-0 bg-white hidden gap-[10px] items-centre p-2 rounded-full w-full"
+                    class="items-centre absolute left-0 top-0 hidden w-full gap-[10px] rounded-full bg-white p-2 opacity-0 transition-opacity duration-300"
                   >
                     <span
                       id="emailIcon"
@@ -641,7 +641,7 @@
                     <input
                       id="email"
                       autocomplete="off"
-                      class="flex-grow placeholder:text-pro-gray text-pro-black"
+                      class="flex-grow text-pro-black placeholder:text-pro-gray"
                       type="text"
                       placeholder="name@mail.com"
                     />
@@ -651,7 +651,7 @@
                       id="toggle-enter-email-submit"
                     >
                       <span
-                        class="material-symbols-outlined flex items-center cursor-pointer"
+                        class="material-symbols-outlined flex cursor-pointer items-center"
                       >
                         arrow_forward
                       </span>
@@ -662,11 +662,11 @@
             </div>
             <div
               id="to-come-canvas"
-              class="relative w-full md:w-1/3 h-[300px] shrink-0"
+              class="relative h-[300px] w-full shrink-0 md:w-1/3"
             >
               <div
                 id="rotation-indicator"
-                class="h-[300px] hidden items-center absolute md:left-[16px] left-1/2 -translate-x-1/2 md:translate-x-0 z-30"
+                class="absolute left-1/2 z-30 hidden h-[300px] -translate-x-1/2 items-center md:left-[16px] md:translate-x-0"
               >
                 <img src="/3d_rotate.svg" alt="" />
               </div>
@@ -675,15 +675,15 @@
         </div>
       </section>
       <!-- Products section -->
-      <section class="my-16 md:my-32 px-6 mx-auto max-w-[1140px]">
-        <h1 class="zen-dots text-xl md:text-5xl mb-2">Produkter</h1>
+      <section class="mx-auto my-16 max-w-[1140px] px-6 md:my-32">
+        <h1 class="zen-dots mb-2 text-xl md:text-5xl">Produkter</h1>
         <div
           id="products-section"
-          class="flex gap-4 lg:gap-6 overflow-auto snap-x snap-mandatory overscroll-x-contain scrollbar-none scroll-smooth"
+          class="flex snap-x snap-mandatory gap-4 overflow-auto overscroll-x-contain scroll-smooth scrollbar-none lg:gap-6"
         >
           <div
             id="product-card-container"
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div class="flex flex-col">
               <img
@@ -694,21 +694,21 @@
               />
               <div id="select-color-container" class="flex gap-2">
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gold border-2 border-pro-light-purple"
+                  class="h-7 w-7 cursor-pointer rounded-full border-2 border-pro-light-purple bg-pro-gold transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gray"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-gray transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-black"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-black transition-colors duration-300 ease-in-out"
                 ></div>
               </div>
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Klassiskt Armband</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Klassiskt Armband</h2>
               <p
                 id="product-card-paragraph"
-                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+                class="mb-6 h-36 overflow-y-hidden transition-all duration-300 ease-in"
               >
                 Upplev en sofistikerad fusion av stil och teknik med vårt
                 klassiska armband. Skapad för den moderna individualisten. Mät
@@ -721,15 +721,15 @@
                 om din hälsa. Tradition möter innovation i varje
                 handledsviftning.
               </p>
-              <div class="flex gap-4 items-center mt-auto">
+              <div class="mt-auto flex items-center gap-4">
                 <button
-                  class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+                  class="transition-color rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
                 >
                   Köp nu
                 </button>
                 <div
                   id="product-card-read-more"
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
+                  class="cursor-pointer select-none text-pro-gray underline transition-colors duration-300 hover:text-pro-black"
                 >
                   Läs mer
                 </div>
@@ -738,7 +738,7 @@
           </div>
           <div
             id="product-card-container"
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div class="flex flex-col">
               <img
@@ -749,21 +749,21 @@
               />
               <div id="select-color-container" class="flex gap-2">
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gold border-2 border-pro-light-purple"
+                  class="h-7 w-7 cursor-pointer rounded-full border-2 border-pro-light-purple bg-pro-gold transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gray"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-gray transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-black"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-black transition-colors duration-300 ease-in-out"
                 ></div>
               </div>
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Tech Armband</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Tech Armband</h2>
               <p
                 id="product-card-paragraph"
-                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+                class="mb-6 h-36 overflow-y-hidden transition-all duration-300 ease-in"
               >
                 Upptäck framtidens armband! Vårt IT-inspirerade armband är inte
                 bara en accessoar, det är din personliga assistent på handleden.
@@ -774,15 +774,15 @@
                 ögonblick och idéer med den inbyggda ljudinspelaren – allt på
                 ett och samma armband.
               </p>
-              <div class="flex gap-4 items-center mt-auto">
+              <div class="mt-auto flex items-center gap-4">
                 <button
-                  class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+                  class="transition-color rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
                 >
                   Köp nu
                 </button>
                 <div
                   id="product-card-read-more"
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
+                  class="cursor-pointer select-none text-pro-gray underline transition-colors duration-300 hover:text-pro-black"
                 >
                   Läs mer
                 </div>
@@ -791,7 +791,7 @@
           </div>
           <div
             id="product-card-container"
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div class="flex flex-col">
               <img
@@ -802,21 +802,21 @@
               />
               <div id="select-color-container" class="flex gap-2">
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gold border-2 border-pro-light-purple"
+                  class="h-7 w-7 cursor-pointer rounded-full border-2 border-pro-light-purple bg-pro-gold transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gray"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-gray transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-black"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-black transition-colors duration-300 ease-in-out"
                 ></div>
               </div>
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Klassisk Ring</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Klassisk Ring</h2>
               <p
                 id="product-card-paragraph"
-                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+                class="mb-6 h-36 overflow-y-hidden transition-all duration-300 ease-in"
               >
                 Upplev tidlös elegans med vår klassiska ring, där skönhet möter
                 teknik. Vår unika ring tar smyckesvärlden till nya höjder genom
@@ -829,15 +829,15 @@
                 ögonblick stilfullt minnesvärt och varje dag en möjlighet att
                 förena tradition med teknologisk innovation.
               </p>
-              <div class="flex gap-4 items-center mt-auto">
+              <div class="mt-auto flex items-center gap-4">
                 <button
-                  class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+                  class="transition-color rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
                 >
                   Köp nu
                 </button>
                 <div
                   id="product-card-read-more"
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
+                  class="cursor-pointer select-none text-pro-gray underline transition-colors duration-300 hover:text-pro-black"
                 >
                   Läs mer
                 </div>
@@ -846,7 +846,7 @@
           </div>
           <div
             id="product-card-container"
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div class="flex flex-col">
               <img
@@ -857,21 +857,21 @@
               />
               <div id="select-color-container" class="flex gap-2">
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gold border-2 border-pro-light-purple"
+                  class="h-7 w-7 cursor-pointer rounded-full border-2 border-pro-light-purple bg-pro-gold transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gray"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-gray transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-black"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-black transition-colors duration-300 ease-in-out"
                 ></div>
               </div>
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Tech Ring</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Tech Ring</h2>
               <p
                 id="product-card-paragraph"
-                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+                class="mb-6 h-36 overflow-y-hidden transition-all duration-300 ease-in"
               >
                 IT-inspirerade smarta ring – en revolution i minimalism och
                 teknik! En elegant ring med en futuristisk skärm över hela sin
@@ -882,15 +882,15 @@
                 bara pryder din hand, utan som också blir din smarta och
                 funktionella följeslagare.
               </p>
-              <div class="flex gap-4 items-center mt-auto">
+              <div class="mt-auto flex items-center gap-4">
                 <button
-                  class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+                  class="transition-color rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
                 >
                   Köp nu
                 </button>
                 <div
                   id="product-card-read-more"
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
+                  class="cursor-pointer select-none text-pro-gray underline transition-colors duration-300 hover:text-pro-black"
                 >
                   Läs mer
                 </div>
@@ -899,7 +899,7 @@
           </div>
           <div
             id="product-card-container"
-            class="flex flex-col shrink-0 gap-10 w-[255px] snap-always snap-start"
+            class="flex w-[255px] shrink-0 snap-start snap-always flex-col gap-10"
           >
             <div class="flex flex-col">
               <img
@@ -910,21 +910,21 @@
               />
               <div id="select-color-container" class="flex gap-2">
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gold border-2 border-pro-light-purple"
+                  class="h-7 w-7 cursor-pointer rounded-full border-2 border-pro-light-purple bg-pro-gold transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-gray"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-gray transition-colors duration-300 ease-in-out"
                 ></div>
                 <div
-                  class="w-7 h-7 cursor-pointer rounded-full transition-colors duration-300 ease-in-out bg-pro-black"
+                  class="h-7 w-7 cursor-pointer rounded-full bg-pro-black transition-colors duration-300 ease-in-out"
                 ></div>
               </div>
             </div>
-            <div class="px-2 flex flex-col flex-grow">
-              <h2 class="text-2xl font-semibold mb-2">Manschetter</h2>
+            <div class="flex flex-grow flex-col px-2">
+              <h2 class="mb-2 text-2xl font-semibold">Manschetter</h2>
               <p
                 id="product-card-paragraph"
-                class="mb-6 overflow-y-hidden h-36 transition-all duration-300 ease-in"
+                class="mb-6 h-36 overflow-y-hidden transition-all duration-300 ease-in"
               >
                 Styla upp din look och känn dig trygg samtidigt med våra
                 trendiga manschettknappar! Dessa eleganta accessoarer är inte
@@ -933,15 +933,15 @@
                 att göra säkra och stiliga betalningar. Manschettknapparna - för
                 den moderna mannen som vet hur man balanserar stil och säkerhet!
               </p>
-              <div class="flex gap-4 items-center mt-auto">
+              <div class="mt-auto flex items-center gap-4">
                 <button
-                  class="bg-pro-gold hover:bg-pro-light-purple hover:text-pro-white transition-color duration-300 py-2 px-4 rounded-full leading-[18px]"
+                  class="transition-color rounded-full bg-pro-gold px-4 py-2 leading-[18px] duration-300 hover:bg-pro-light-purple hover:text-pro-white"
                 >
                   Köp nu
                 </button>
                 <div
                   id="product-card-read-more"
-                  class="underline cursor-pointer text-pro-gray hover:text-pro-black transition-colors duration-300 select-none"
+                  class="cursor-pointer select-none text-pro-gray underline transition-colors duration-300 hover:text-pro-black"
                 >
                   Läs mer
                 </div>
@@ -953,10 +953,10 @@
       <!-- Testamonial card -->
       <section>
         <div
-          class="py-8 sm:py-16 px-6 bg-pro-light-gold w-full max-w-[850px] mx-auto flex justify-between sm:justify-center sm:gap-6"
+          class="mx-auto flex w-full max-w-[850px] justify-between bg-pro-light-gold px-6 py-8 sm:justify-center sm:gap-6 sm:py-16"
         >
           <div
-            class="w-[139px] h-[139px] sm:w-[200px] sm:h-[200px] md:w-[280px] md:h-[280px] shrink-0 rounded-full overflow-hidden mr-6 sm:mr-0"
+            class="mr-6 h-[139px] w-[139px] shrink-0 overflow-hidden rounded-full sm:mr-0 sm:h-[200px] sm:w-[200px] md:h-[280px] md:w-[280px]"
           >
             <img
               class="h-full w-full object-cover"
@@ -965,15 +965,15 @@
             />
           </div>
           <div
-            class="flex flex-col justify-center gap-4 sm:gap-8 max-w-[300px]"
+            class="flex max-w-[300px] flex-col justify-center gap-4 sm:gap-8"
           >
-            <div class="flex items-center gap-[7px] mx-auto">
+            <div class="mx-auto flex items-center gap-[7px]">
               <span>
                 <img src="/user.svg" alt="" />
               </span>
               <h3>Anna Vidstam</h3>
             </div>
-            <p class="text-pro-gray text-center sm:text-2xl">
+            <p class="text-center text-pro-gray sm:text-2xl">
               “Älskade detta känner mig så trygg nu när jag ska åka taxi själv
               hem från krogen
             </p>
@@ -982,11 +982,11 @@
       </section>
     </main>
     <footer
-      class="mt-16 md:mt-32 px-6 pt-16 pb-8 lg:pb-32 bg-pro-white-purple flex flex-col items-center"
+      class="mt-16 flex flex-col items-center bg-pro-white-purple px-6 pb-8 pt-16 md:mt-32 lg:pb-32"
     >
       <button
         id="scrollToTop"
-        class="cursor-pointer py-2 px-16 bg-pro-light-purple hover:bg-pro-gold hover:text-pro-black transition-all duration-300 rounded-full text-pro-white flex items-center text-sm mb-12 lg:text-xl"
+        class="mb-12 flex cursor-pointer items-center rounded-full bg-pro-light-purple px-16 py-2 text-sm text-pro-white transition-all duration-300 hover:bg-pro-gold hover:text-pro-black lg:text-xl"
       >
         <span>Till toppen</span>
         <span class="material-symbols-outlined flex items-center">
@@ -994,25 +994,25 @@
         </span>
       </button>
       <!-- Mobile links -->
-      <div class="lg:hidden w-full">
+      <div class="w-full lg:hidden">
         <div
           id="dropdown-btn"
-          class="border border-x-transparent border-y-pro-black py-2 select-none w-full"
+          class="w-full select-none border border-x-transparent border-y-pro-black py-2"
         >
-          <div class="flex justify-between items-center cursor-pointer">
+          <div class="flex cursor-pointer items-center justify-between">
             <div>
-              <h1 class="m-0 text-xl zen-dots">Kontakta oss</h1>
+              <h1 class="zen-dots m-0 text-xl">Kontakta oss</h1>
               <p class="m-0 text-pro-dark-purple">Kontaktuppgifter</p>
             </div>
             <span
               id="expand-icon"
-              class="material-symbols-outlined text-5xl cursor-pointer text-pro-dark-purple"
+              class="material-symbols-outlined cursor-pointer text-5xl text-pro-dark-purple"
             >
               expand_more
             </span>
           </div>
           <div
-            class="flex flex-col gap-4 h-0 overflow-hidden transition-all ease-out duration-300"
+            class="flex h-0 flex-col gap-4 overflow-hidden transition-all duration-300 ease-out"
           >
             <div class="flex gap-2">
               <span class="material-symbols-outlined"> call </span>
@@ -1026,31 +1026,31 @@
         </div>
         <div
           id="dropdown-btn"
-          class="border border-x-transparent border-b-pro-black py-2 select-none w-full"
+          class="w-full select-none border border-x-transparent border-b-pro-black py-2"
         >
-          <div class="flex justify-between items-center cursor-pointer">
+          <div class="flex cursor-pointer items-center justify-between">
             <div>
-              <h1 class="m-0 text-xl zen-dots">Hjälp och support</h1>
+              <h1 class="zen-dots m-0 text-xl">Hjälp och support</h1>
               <p class="m-0 text-pro-dark-purple">Hjälp och support</p>
             </div>
             <span
               id="expand-icon"
-              class="material-symbols-outlined text-5xl cursor-pointer text-pro-dark-purple"
+              class="material-symbols-outlined cursor-pointer text-5xl text-pro-dark-purple"
             >
               expand_more
             </span>
           </div>
           <div
-            class="flex flex-col gap-2 h-0 overflow-hidden transition-all ease-out duration-300"
+            class="flex h-0 flex-col gap-2 overflow-hidden transition-all duration-300 ease-out"
           >
-            <a href="#" class="text-pro-gray text-sm underline">FAQ</a>
+            <a href="#" class="text-sm text-pro-gray underline">FAQ</a>
           </div>
         </div>
       </div>
       <!-- Desktop links -->
-      <div class="hidden lg:flex gap-6 justify-center w-full">
+      <div class="hidden w-full justify-center gap-6 lg:flex">
         <div class="flex flex-col gap-8 px-2">
-          <h2 class="text-2xl font-semibold leading-30px">Hjälp och support</h2>
+          <h2 class="leading-30px text-2xl font-semibold">Hjälp och support</h2>
           <div class="flex flex-col gap-4 text-xl leading-[27px]">
             <a href="#">Fel på hemsidan</a>
             <a href="#">Hjälp att hitta rätt stolek armband</a>
@@ -1058,14 +1058,14 @@
           </div>
         </div>
         <div class="flex flex-col gap-8 px-2">
-          <h2 class="text-2xl font-semibold leading-30px">Kontakta oss</h2>
+          <h2 class="leading-30px text-2xl font-semibold">Kontakta oss</h2>
           <div class="flex flex-col gap-4 text-xl leading-[27px]">
             <a href="#">Telefon - +46 031 111 22 33</a>
             <a href="#">Mail - support@protech.se</a>
           </div>
         </div>
         <div class="flex flex-col gap-8 px-2">
-          <h2 class="text-2xl font-semibold leading-30px">Protech appen</h2>
+          <h2 class="leading-30px text-2xl font-semibold">Protech appen</h2>
           <div
             class="flex flex-col gap-4 text-xl leading-[27px] text-pro-dark-purple underline underline-offset-4"
           >
@@ -1074,22 +1074,22 @@
           </div>
         </div>
         <div class="flex flex-col gap-8 px-2">
-          <h2 class="text-2xl font-semibold leading-30px">Nyhetsbrevet</h2>
+          <h2 class="leading-30px text-2xl font-semibold">Nyhetsbrevet</h2>
           <div class="flex flex-col gap-4 text-xl leading-[27px]">
             <form
               id="form"
-              class="flex gap-[10px] items-centre py-[6px] w-full border-2 border-transparent border-b-pro-dark-purple"
+              class="items-centre flex w-full gap-[10px] border-2 border-transparent border-b-pro-dark-purple py-[6px]"
             >
               <input
                 id="email"
                 autocomplete="off"
-                class="flex-grow placeholder:text-pro-gray bg-transparent text-[22px] placeholder:text-[22px]"
+                class="flex-grow bg-transparent text-[22px] placeholder:text-[22px] placeholder:text-pro-gray"
                 type="text"
                 placeholder="name@mail.com"
               />
               <button id="emailIcon" type="submit">
                 <span
-                  class="material-symbols-outlined flex items-center cursor-pointer text-pro-dark-purple"
+                  class="material-symbols-outlined flex cursor-pointer items-center text-pro-dark-purple"
                 >
                   arrow_forward
                 </span>
@@ -1098,10 +1098,10 @@
           </div>
         </div>
       </div>
-      <div class="lg:hidden mt-[88px] w-full flex gap-[54px] justify-center">
-        <img class="cursor-pointer w-9 h-w-9" src="/instagram.svg" alt="" />
-        <img class="cursor-pointer w-9 h-w-9" src="/facebook.svg" alt="" />
-        <img class="cursor-pointer w-9 h-w-9" src="/x.svg" alt="" />
+      <div class="mt-[88px] flex w-full justify-center gap-[54px] lg:hidden">
+        <img class="h-w-9 w-9 cursor-pointer" src="/instagram.svg" alt="" />
+        <img class="h-w-9 w-9 cursor-pointer" src="/facebook.svg" alt="" />
+        <img class="h-w-9 w-9 cursor-pointer" src="/x.svg" alt="" />
       </div>
     </footer>
     <script type="module" src="./main.js"></script>
