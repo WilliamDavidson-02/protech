@@ -38,8 +38,4 @@ input {
 
 .parallax {
   background-image: url("/parallax_prod.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
