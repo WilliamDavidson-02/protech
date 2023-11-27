@@ -401,6 +401,8 @@ toggleEnterEmailToCome.addEventListener("click", () => {
   form.classList.replace("hidden", "flex");
   submitBtn.classList.toggle("hidden");
 
+  email.focus();
+
   setTimeout(() => {
     form.classList.replace("opacity-0", "opacity-100");
     submitBtn.classList.replace("opacity-0", "opacity-100");
