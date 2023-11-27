@@ -1,7 +1,7 @@
 const collectionData = [
   [
     {
-      img: "/Preview_Classic_Gold.png",
+      img: "/classic_gold_ring.png",
       title: "Klassisk Ring",
       description: "Upplev tidlös elegans",
     },
@@ -18,7 +18,7 @@ const collectionData = [
   ],
   [
     {
-      img: "/Preview_Tech_Black.png",
+      img: "/tech_black_ring.png",
       title: "Tech Ring",
       description: "En revolution i minimalism och teknik!",
     },

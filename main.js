@@ -25,18 +25,18 @@ const collectionCards = document.querySelectorAll("#collection-card");
 let collectionType = 0;
 
 const selectColorContainers = document.querySelectorAll(
-  "#select-color-container"
+  "#select-color-container",
 );
 const productImages = document.querySelectorAll("#product-img");
 
 const scrollToProducts = document.querySelector("#scroll-to-products");
 
 const toggleEnterEmailToCome = document.querySelector(
-  "#toggle-enter-email-to-come"
+  "#toggle-enter-email-to-come",
 );
 
 const productCardContainer = document.querySelectorAll(
-  "#product-card-container"
+  "#product-card-container",
 );
 
 const languageContainers = document.querySelectorAll("#language-container");
@@ -91,11 +91,11 @@ const options = {
 
 const keyChainObserver = new IntersectionObserver(
   (entries) => handleKeyChainIntersection(entries, keyChainObserver),
-  options
+  options,
 );
 const productCardsObserver = new IntersectionObserver(
   (entries) => handleProductCardsIntersection(entries, productCardsObserver),
-  options
+  options,
 );
 
 keyChainObserver.observe(toComeSection);
@@ -179,7 +179,7 @@ const toggleDesktopDropdown = (index) => {
       collectionType = 0;
       collectionNavBtns[collectionType].children[0].classList.add(
         "font-semibold",
-        "text-pro-dark-purple"
+        "text-pro-dark-purple",
       );
     }
   }
@@ -208,12 +208,12 @@ const toggleMenuBar = () => {
     firstLine.classList.remove(
       "-rotate-45",
       "w-[calc-(19*1.41421356237)px]",
-      "-translate-y-[3px]"
+      "-translate-y-[3px]",
     );
     thirdLine.classList.remove(
       "rotate-45",
       "w-[calc-(19*1.41421356237)px]",
-      "translate-y-[3px]"
+      "translate-y-[3px]",
     );
     if (prevDropdownIndex !== null) {
       toggleDropdown(prevDropdownIndex);
@@ -225,12 +225,12 @@ const toggleMenuBar = () => {
     firstLine.classList.add(
       "-rotate-45",
       "w-[calc-(19*1.41421356237)px]",
-      "-translate-y-[3px]"
+      "-translate-y-[3px]",
     );
     thirdLine.classList.add(
       "rotate-45",
       "w-[calc-(19*1.41421356237)px]",
-      "translate-y-[3px]"
+      "translate-y-[3px]",
     );
   }
 };
@@ -371,17 +371,13 @@ selectColorContainers.forEach((container, prodIndex) => {
       const productsData = [
         ["/Classy_Gold.png", "/Classy_Silver.png", "/Classy_Dark.png"],
         ["/Tech_Gold.png", "/Tech_Silver.png", "/Tech_Dark.png"],
+        ["/classic_gold_ring.png", "/classic_silver_ring.png"],
         [
-          "/Preview_Classic_Gold.png",
-          "/Preview_Classic_Chrome.png",
-          "/Preview_Classic_Black.png",
+          "/tech_gold_ring.png",
+          "/tech_silver_ring.png",
+          "/tech_black_ring.png",
         ],
-        [
-          "/Preview_Tech_Gold.png",
-          "/Preview_Tech_Chrome.png",
-          "/Preview_Tech_Black.png",
-        ],
-        ["/Manch_Gold.png", "/Manch_Silver.png", "/Manch_Dark.png"],
+        ["/manchettguld.png", "/manchettsilver.png"],
       ];
 
       productImages[prodIndex].src = productsData[prodIndex][colorIndex];
@@ -390,7 +386,7 @@ selectColorContainers.forEach((container, prodIndex) => {
 });
 
 scrollToProducts.addEventListener("click", () =>
-  productSection.scrollIntoView({ behavior: "smooth", block: "center" })
+  productSection.scrollIntoView({ behavior: "smooth", block: "center" }),
 );
 
 toggleEnterEmailToCome.addEventListener("click", () => {
