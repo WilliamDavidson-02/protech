@@ -55,15 +55,23 @@ const togglePrevCollection = (btn) => {
   }
 };
 
+function fadeRotationIndicatorOut() {
+  rotationIndicator.classList.toggle("opacity-0");
+  setTimeout(() => {
+    rotationIndicator.classList.replace("flex", "hidden");
+  }, 300);
+}
+
 const handleKeyChainIntersection = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       rotationIndicator.classList.replace("hidden", "flex");
-      rotationIndicator.classList.toggle("fade-in-out");
       setTimeout(() => {
-        rotationIndicator.classList.replace("flex", "hidden");
-        rotationIndicator.classList.toggle("fade-in-out");
-      }, 1200);
+        rotationIndicator.classList.toggle("opacity-0");
+      }, 10);
+      setTimeout(() => {
+        fadeRotationIndicatorOut();
+      }, 10000);
 
       observer.unobserve(entry.target);
     }
@@ -450,3 +458,5 @@ languageContainers.forEach((container) => {
     });
   });
 });
+
+rotationIndicator.addEventListener("mousedown", fadeRotationIndicatorOut);
