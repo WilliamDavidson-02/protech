@@ -402,28 +402,31 @@ toggleEnterEmailToCome.addEventListener("click", () => {
   const email = toggleEnterEmailToCome.querySelector("#email");
   const submitBtn = document.querySelector("#toggle-enter-email-submit");
 
+  if (toggleEnterEmailToCome.classList.contains("w-[270px]")) {
+    toggleEnterEmailToCome.classList.replace("w-[270px]", "w-[400px]");
+  } else {
+    toggleEnterEmailToCome.classList.replace("w-[400px]", "w-[270px]");
+  }
+
   form.addEventListener("click", (ev) => {
     ev.stopPropagation();
   });
 
   form.classList.replace("hidden", "flex");
-  submitBtn.classList.toggle("hidden");
 
   email.focus();
 
   setTimeout(() => {
     form.classList.replace("opacity-0", "opacity-100");
-    submitBtn.classList.replace("opacity-0", "opacity-100");
   }, 10);
 
   submitBtn.addEventListener("click", () => {
     if (!emailRegexpTest(email.value)) return;
     form.classList.replace("opacity-100", "opacity-0");
-    submitBtn.classList.replace("opacity-100", "opacity-0");
+    toggleEnterEmailToCome.classList.replace("w-[400px]", "w-[270px]");
 
     setTimeout(() => {
       form.classList.replace("flex", "hidden");
-      submitBtn.classList.toggle("hidden");
     }, 300);
   });
 });
