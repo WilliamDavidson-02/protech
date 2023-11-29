@@ -463,3 +463,4 @@ languageContainers.forEach((container) => {
 });
 
 rotationIndicator.addEventListener("mousedown", fadeRotationIndicatorOut);
+rotationIndicator.addEventListener("touchstart", fadeRotationIndicatorOut);

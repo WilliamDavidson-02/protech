@@ -11,7 +11,7 @@ const collectionData = [
       description: "Upplev tidlös elegans",
     },
     {
-      img: "/Ring Tech 3.png",
+      img: "/classic_all.png",
       title: "Se alla",
       description: "Upplev tidlös elegans",
     },
@@ -28,7 +28,7 @@ const collectionData = [
       description: "En revolution i minimalism och teknik!",
     },
     {
-      img: "/Ring Tech 3.png",
+      img: "/tech_all.png",
       title: "Se alla",
       description: "En revolution i minimalism och teknik!",
     },
